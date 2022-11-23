@@ -118,6 +118,7 @@ namespace LHMS_Application.Forms
 
         private void btnSales_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new Froms.FrmSalesForms(), sender);
 
         }
     }
