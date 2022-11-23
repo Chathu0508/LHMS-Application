@@ -1,0 +1,21 @@
+D:\Docment\Esoft\MSS\MSS Project\LHMS Application\LHMS Application\bin\Debug\LHMS Application.exe.config
+D:\Docment\Esoft\MSS\MSS Project\LHMS Application\LHMS Application\bin\Debug\LHMS Application.exe
+D:\Docment\Esoft\MSS\MSS Project\LHMS Application\LHMS Application\bin\Debug\LHMS Application.pdb
+D:\Docment\Esoft\MSS\MSS Project\LHMS Application\LHMS Application\obj\Debug\LHMS Application.csproj.AssemblyReference.cache
+D:\Docment\Esoft\MSS\MSS Project\LHMS Application\LHMS Application\obj\Debug\LHMS Application.csproj.SuggestedBindingRedirects.cache
+D:\Docment\Esoft\MSS\MSS Project\LHMS Application\LHMS Application\obj\Debug\LHMS_Application.Properties.Resources.resources
+D:\Docment\Esoft\MSS\MSS Project\LHMS Application\LHMS Application\obj\Debug\LHMS Application.csproj.GenerateResource.cache
+D:\Docment\Esoft\MSS\MSS Project\LHMS Application\LHMS Application\obj\Debug\LHMS Application.csproj.CoreCompileInputs.cache
+D:\Docment\Esoft\MSS\MSS Project\LHMS Application\LHMS Application\obj\Debug\LHMS Application.exe
+D:\Docment\Esoft\MSS\MSS Project\LHMS Application\LHMS Application\obj\Debug\LHMS Application.pdb
+D:\Docment\Esoft\MSS\MSS Project\LHMS Application\LHMS Application\obj\Debug\LHMS_Application.Forms.FrmCategory.resources
+D:\Docment\Esoft\MSS\MSS Project\LHMS Application\LHMS Application\obj\Debug\LHMS_Application.Forms.FrmSales.resources
+D:\Docment\Esoft\MSS\MSS Project\LHMS Application\LHMS Application\obj\Debug\LHMS_Application.Forms.FrmTasks.resources
+D:\Docment\Esoft\MSS\MSS Project\LHMS Application\LHMS Application\obj\Debug\LHMS_Application.Forms.FrmSetting.resources
+D:\Docment\Esoft\MSS\MSS Project\LHMS Application\LHMS Application\obj\Debug\LHMS_Application.UI.frmLogin.resources
+D:\Docment\Esoft\MSS\MSS Project\LHMS Application\LHMS Application\obj\Debug\LHMS_Application.UI.FrmOpening.resources
+D:\Docment\Esoft\MSS\MSS Project\LHMS Application\LHMS Application\obj\Debug\LHMS_Application.UI.frmDashboardAD.resources
+D:\Docment\Esoft\MSS\MSS Project\LHMS Application\LHMS Application\obj\Debug\LHMS_Application.Forms.FrmUsers.resources
+D:\Docment\Esoft\MSS\MSS Project\LHMS Application\LHMS Application\obj\Debug\LHMS_Application.Forms.FrmProduct.resources
+D:\Docment\Esoft\MSS\MSS Project\LHMS Application\LHMS Application\obj\Debug\LHMS_Application.Froms.FrmDealersAndCustomer.resources
+D:\Docment\Esoft\MSS\MSS Project\LHMS Application\LHMS Application\obj\Debug\LHMS_Application.Froms.SampleTestUI.resources
