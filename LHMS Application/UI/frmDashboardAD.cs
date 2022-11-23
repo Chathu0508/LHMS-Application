@@ -106,7 +106,7 @@ namespace LHMS_Application.UI
         }
         private void btnUser_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Froms.SampleTestUI(),  sender);
+            OpenChildForm(new Forms.FrmUsers(),  sender);
         }
 
         private void btnProduct_Click(object sender, EventArgs e)

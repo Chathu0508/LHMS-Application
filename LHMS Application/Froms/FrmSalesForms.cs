@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace LHMS_Application.Froms
 {
-    public partial class FrmDealersAndCustomer : Form
+    public partial class FrmSalesForms : Form
     {
-        public FrmDealersAndCustomer()
+        public FrmSalesForms()
         {
             InitializeComponent();
-        }
-
-        private void FrmDealersAndCustomer_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
