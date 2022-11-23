@@ -113,7 +113,7 @@ namespace LHMS_Application.Forms
 
         private void btnPurchase_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new Froms.FrmPurchase(), sender);
         }
 
         private void btnSales_Click(object sender, EventArgs e)
