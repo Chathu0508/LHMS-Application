@@ -16,5 +16,10 @@ namespace LHMS_Application.Froms
         {
             InitializeComponent();
         }
+
+        private void FrmDealersAndCustomer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
