@@ -48,11 +48,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\categoryBll.cs" />
+    <Compile Include="BLL\dealcusBll.cs" />
     <Compile Include="BLL\loginBll.cs" />
     <Compile Include="BLL\productBll.cs" />
     <Compile Include="BLL\taskBLL.cs" />
     <Compile Include="BLL\UserBll.cs" />
     <Compile Include="Dal\categoryDal.cs" />
+    <Compile Include="Dal\dealcusDal.cs" />
     <Compile Include="Dal\loginDal.cs" />
     <Compile Include="Dal\productDal.cs" />
     <Compile Include="Dal\TaskDal.cs" />

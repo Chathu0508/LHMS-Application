@@ -40,3 +40,4 @@ D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\L
 D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS Application.csproj.CoreCompileInputs.cache
 D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS Application.exe
 D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS Application.pdb
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.Froms.FrmSalesForms.resources

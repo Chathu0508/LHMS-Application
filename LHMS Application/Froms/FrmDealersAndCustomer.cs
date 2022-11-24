@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LHMS_Application.BLL;
+using LHMS_Application.Dal;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,8 +18,15 @@ namespace LHMS_Application.Froms
         {
             InitializeComponent();
         }
+        dealcusBll dc = new dealcusBll();
+        dealcusDal dal = new dealcusDal();
 
         private void FrmDealersAndCustomer_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnadd_Click(object sender, EventArgs e)
         {
 
         }
