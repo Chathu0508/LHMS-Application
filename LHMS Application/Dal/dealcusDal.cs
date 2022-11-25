@@ -51,7 +51,7 @@ namespace LHMS_Application.Dal
         }
 
         #endregion
-        #region Insert New Categories
+        #region Insert New Deal and customer
         public bool Insert(dealcusBll dc)
         {
             // Creating a Boolean Variable And set its defualt value to fales. 
@@ -61,7 +61,7 @@ namespace LHMS_Application.Dal
 
             try
             {
-                //witting queary to add the new categories.
+                //witting queary to add the new Deal and customer.
                 string sql = "INSERT INTO tbl_dea_cust (type, name, email, contact, address, add_date, added_by) VALUES(@type, @name, @email, @contact, @address, @add_date, @added_by)";
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
@@ -119,7 +119,7 @@ namespace LHMS_Application.Dal
             try
             {
                 //queary to update catagories.
-                string sql = "UPDATE tbl_dea_cust SET tyep=@type, name=@name, email=@email, contact=@contact, address@address, add_date@add_date, added_by@added_by WHERE id=@id";
+                string sql = "UPDATE tbl_dea_cust SET type=@type, name=@name, email=@email, contact=@contact, address=@address, add_date=@add_date, added_by=@added_by WHERE id=@id";
 
                 //SQL command to pass the Values on Sql Queary
                 SqlCommand cmd = new SqlCommand(sql, conn);
@@ -132,6 +132,7 @@ namespace LHMS_Application.Dal
                 cmd.Parameters.AddWithValue("@address", dc.address);
                 cmd.Parameters.AddWithValue("@add_date", dc.add_date);
                 cmd.Parameters.AddWithValue("@added_by", dc.added_by);
+                cmd.Parameters.AddWithValue("@id", dc.id);
 
                 //open the connection to database
                 conn.Open();
@@ -163,7 +164,7 @@ namespace LHMS_Application.Dal
             return isSuccess;
         }
         #endregion
-        #region Delete Categories
+        #region Delete Deal and customer
         public bool Delete(dealcusBll dc)
         {
             //Createing boolean variable and set its values to fales.
