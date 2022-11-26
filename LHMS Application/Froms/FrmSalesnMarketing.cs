@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace LHMS_Application.Forms
 {
-    public partial class FrmSales : Form
+    public partial class FrmSalesnMarketing : Form
     {
         //field
         private Button currentButton;
@@ -19,12 +19,11 @@ namespace LHMS_Application.Forms
         private int tempIndex;
         private Form activeForm;
 
-        public FrmSales()
+        public FrmSalesnMarketing()
         {
             InitializeComponent();
 
             random = new Random();
-            btncloseChildFrom.Visible = false;
             this.Text = string.Empty;
             this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
@@ -53,11 +52,8 @@ namespace LHMS_Application.Forms
                     currentButton.BackColor = color;
                     currentButton.ForeColor = Color.White;
                     currentButton.Font = new System.Drawing.Font("Century Gothic", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                    pnlTitleBar.BackColor = color;
-                    pnlmain.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     ThemeColor.PrimaryColor = color;
                     ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
-                    btncloseChildFrom.Visible = true;
 
                 }
             }
@@ -92,18 +88,11 @@ namespace LHMS_Application.Forms
             this.panelDesktopPanal.Tag = childFrom;
             childFrom.BringToFront();
             childFrom.Show();
-            lblTitle.Text = childFrom.Text;
-
-
         }
         private void Reset()
         {
             DisableButton();
-            lblTitle.Text = "HOME DashBoard";
-            pnlTitleBar.BackColor = Color.FromArgb(0, 150, 136);
-            pnlTitleBar.BackColor = Color.FromArgb(39, 39, 58);
             currentButton = null;
-            btncloseChildFrom.Visible = false;
         }
 
         private void btndel_cus_Click(object sender, EventArgs e)
@@ -118,8 +107,15 @@ namespace LHMS_Application.Forms
 
         private void btnSales_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Froms.FrmSalesForms(), sender);
+            OpenChildForm(new Froms.FrmPurchase(), sender);
 
+        }
+
+        private void btncloseChildFrom_Click(object sender, EventArgs e)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            Reset();
         }
     }
 }

@@ -27,7 +27,6 @@ D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\L
 D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.Forms.FrmCategory.resources
 D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.Froms.FrmDealersAndCustomer.resources
 D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.Forms.FrmProduct.resources
-D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.Forms.FrmSales.resources
 D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.Forms.FrmSetting.resources
 D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.Forms.FrmTasks.resources
 D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.Forms.FrmUsers.resources
@@ -40,4 +39,5 @@ D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\L
 D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS Application.csproj.CoreCompileInputs.cache
 D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS Application.exe
 D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS Application.pdb
-D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.Froms.FrmSalesForms.resources
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.Froms.FrmPurchase.resources
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.Forms.FrmSalesnMarketing.resources

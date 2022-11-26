@@ -16,5 +16,6 @@ namespace LHMS_Application.Froms
         {
             InitializeComponent();
         }
+
     }
 }
