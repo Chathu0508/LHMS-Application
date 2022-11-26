@@ -126,7 +126,7 @@ namespace LHMS_Application.UI
 
         private void btnSales_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FrmSales(), sender);
+            OpenChildForm(new Forms.FrmSalesnMarketing(), sender);
         }
 
         private void btnSetting_Click(object sender, EventArgs e)

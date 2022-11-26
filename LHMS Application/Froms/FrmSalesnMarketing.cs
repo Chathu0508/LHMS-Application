@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace LHMS_Application.Forms
 {
-    public partial class FrmSales : Form
+    public partial class FrmSalesnMarketing : Form
     {
         //field
         private Button currentButton;
@@ -19,7 +19,7 @@ namespace LHMS_Application.Forms
         private int tempIndex;
         private Form activeForm;
 
-        public FrmSales()
+        public FrmSalesnMarketing()
         {
             InitializeComponent();
 
@@ -107,7 +107,7 @@ namespace LHMS_Application.Forms
 
         private void btnSales_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Froms.FrmSalesForms(), sender);
+            OpenChildForm(new Froms.FrmPurchase(), sender);
 
         }
 

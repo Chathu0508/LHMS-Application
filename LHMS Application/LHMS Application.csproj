@@ -89,17 +89,11 @@
     <Compile Include="Froms\FrmPurchase.Designer.cs">
       <DependentUpon>FrmPurchase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Froms\FrmSales.cs">
+    <Compile Include="Froms\FrmSalesnMarketing.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Froms\FrmSales.Designer.cs">
-      <DependentUpon>FrmSales.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Froms\FrmSalesForms.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Froms\FrmSalesForms.Designer.cs">
-      <DependentUpon>FrmSalesForms.cs</DependentUpon>
+    <Compile Include="Froms\FrmSalesnMarketing.Designer.cs">
+      <DependentUpon>FrmSalesnMarketing.cs</DependentUpon>
     </Compile>
     <Compile Include="Froms\FrmTasks.cs">
       <SubType>Form</SubType>
@@ -155,11 +149,11 @@
     <EmbeddedResource Include="Froms\FrmProduct.resx">
       <DependentUpon>FrmProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Froms\FrmSales.resx">
-      <DependentUpon>FrmSales.cs</DependentUpon>
+    <EmbeddedResource Include="Froms\FrmPurchase.resx">
+      <DependentUpon>FrmPurchase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Froms\FrmSalesForms.resx">
-      <DependentUpon>FrmSalesForms.cs</DependentUpon>
+    <EmbeddedResource Include="Froms\FrmSalesnMarketing.resx">
+      <DependentUpon>FrmSalesnMarketing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Froms\FrmSetting.resx">
       <DependentUpon>FrmSetting.cs</DependentUpon>

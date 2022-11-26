@@ -1,6 +1,6 @@
 ﻿namespace LHMS_Application.Forms
 {
-    partial class FrmSales
+    partial class FrmSalesnMarketing
     {
         /// <summary>
         /// Required designer variable.
@@ -110,7 +110,7 @@
             this.panelDesktopPanal.Size = new System.Drawing.Size(850, 657);
             this.panelDesktopPanal.TabIndex = 1;
             // 
-            // FrmSales
+            // FrmSalesnMarketing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -118,7 +118,8 @@
             this.Controls.Add(this.panelDesktopPanal);
             this.Controls.Add(this.pnlMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmSales";
+            this.Name = "FrmSalesnMarketing";
+            this.Text = "Sales and Marketing";
             this.pnlMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
