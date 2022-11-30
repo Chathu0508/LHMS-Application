@@ -186,7 +186,7 @@ namespace LHMS_Application.Forms
 
         }
 
-        private void txtSearch_TextChanged(object sender, EventArgs e)
+        private void txtSearch_TextChanged_1(object sender, EventArgs e)
         {
             string keywords = txtSearch.Text;
 

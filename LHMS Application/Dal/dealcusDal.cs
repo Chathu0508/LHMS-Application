@@ -248,6 +248,52 @@ namespace LHMS_Application.Dal
             return dt;
         }
         #endregion
+        #region Serach the Dealer & customer for taranaction details
+        public dealcusBll SearchDealerCustomerFortransaction (string keyword)
+        {
+            //creat a object for deacustbLl
+            dealcusBll dc = new dealcusBll();
+
+            // create a databsae connection 
+            SqlConnection conn = new SqlConnection(myconnstrng);
+
+            //Create a data tabel tp hold the value.
+            DataTable dt = new DataTable();
+            try
+            {
+                //wirte a sql qurry to  search the dealer or customer bassed on the keyword.
+                string sql = "SELECT name, email, contact, address, from tbl_dea_cust WHERE id like '%" + keyword + "%' OR name LIKE '%" + keyword + "%' ";
+
+                //create sql dataadpter to excute the queary
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
+
+                //open data base connection
+                conn.Open();
+
+                //transfer the data from SQL Data to datatable.
+                adapter.Fill(dt);
+
+                //if we have value  on ythe dt we need to save it in dealcustomer bll
+                if(dt.Rows.Count > 0)
+                {
+                    dc.name = dt.Rows[0]["name"].ToString();
+                    dc.email = dt.Rows[1]["email"].ToString();
+                    dc.contact = dt.Rows[2]["contact"].ToString();
+                    dc.address = dt.Rows[3]["address"].ToString();
+                }
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dc;
+        }
+        #endregion
 
 
     }

@@ -42,6 +42,8 @@ namespace LHMS_Application.Dal
 
                 adapter.Fill(dt);
 
+                conn.Open();
+
                 //checking the rows in Datatable
                 if (dt.Rows.Count > 0)
                 {

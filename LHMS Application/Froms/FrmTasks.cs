@@ -95,5 +95,11 @@ namespace LHMS_Application.Forms
             }
 
         }
+
+        private void FrmTasks_Load(object sender, EventArgs e)
+        {
+            DataTable dt = dal.Select();
+            dgvtasks.DataSource = dt;
+        }
     }
 }

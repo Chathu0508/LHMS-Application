@@ -52,12 +52,16 @@
     <Compile Include="BLL\loginBll.cs" />
     <Compile Include="BLL\productBll.cs" />
     <Compile Include="BLL\taskBLL.cs" />
+    <Compile Include="BLL\transactionalDetailsBll.cs" />
+    <Compile Include="Dal\transactionDal.cs" />
+    <Compile Include="BLL\transactionsBll.cs" />
     <Compile Include="BLL\UserBll.cs" />
     <Compile Include="Dal\categoryDal.cs" />
     <Compile Include="Dal\dealcusDal.cs" />
     <Compile Include="Dal\loginDal.cs" />
     <Compile Include="Dal\productDal.cs" />
     <Compile Include="Dal\TaskDal.cs" />
+    <Compile Include="Dal\transactiondetialDal.cs" />
     <Compile Include="Dal\userDal.cs" />
     <Compile Include="Froms\FrmCategory.cs">
       <SubType>Form</SubType>
@@ -77,17 +81,23 @@
     <Compile Include="Froms\FrmfacUser.Designer.cs">
       <DependentUpon>FrmfacUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Froms\FrmFHUserS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\FrmFHUserS.Designer.cs">
+      <DependentUpon>FrmFHUserS.cs</DependentUpon>
+    </Compile>
     <Compile Include="Froms\FrmProduct.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Froms\FrmProduct.Designer.cs">
       <DependentUpon>FrmProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Froms\FrmPurchase.cs">
+    <Compile Include="Froms\FrmPurchaseandsales.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Froms\FrmPurchase.Designer.cs">
-      <DependentUpon>FrmPurchase.cs</DependentUpon>
+    <Compile Include="Froms\FrmPurchaseandsales.Designer.cs">
+      <DependentUpon>FrmPurchaseandsales.cs</DependentUpon>
     </Compile>
     <Compile Include="Froms\FrmSalesnMarketing.cs">
       <SubType>Form</SubType>
@@ -100,6 +110,12 @@
     </Compile>
     <Compile Include="Froms\FrmTasks.Designer.cs">
       <DependentUpon>FrmTasks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Froms\FrmTaskTrack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\FrmTaskTrack.Designer.cs">
+      <DependentUpon>FrmTaskTrack.cs</DependentUpon>
     </Compile>
     <Compile Include="Froms\FrmUsers.cs">
       <SubType>Form</SubType>
@@ -128,6 +144,12 @@
     <Compile Include="UI\frmDashboardAD.Designer.cs">
       <DependentUpon>frmDashboardAD.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\frmFactoryHDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmFactoryHDashboard.Designer.cs">
+      <DependentUpon>frmFactoryHDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,11 +168,14 @@
     <EmbeddedResource Include="Froms\FrmDealersAndCustomer.resx">
       <DependentUpon>FrmDealersAndCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Froms\FrmFHUserS.resx">
+      <DependentUpon>FrmFHUserS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Froms\FrmProduct.resx">
       <DependentUpon>FrmProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Froms\FrmPurchase.resx">
-      <DependentUpon>FrmPurchase.cs</DependentUpon>
+    <EmbeddedResource Include="Froms\FrmPurchaseandsales.resx">
+      <DependentUpon>FrmPurchaseandsales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Froms\FrmSalesnMarketing.resx">
       <DependentUpon>FrmSalesnMarketing.cs</DependentUpon>
@@ -160,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Froms\FrmTasks.resx">
       <DependentUpon>FrmTasks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\FrmTaskTrack.resx">
+      <DependentUpon>FrmTaskTrack.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Froms\FrmUsers.resx">
       <DependentUpon>FrmUsers.cs</DependentUpon>
@@ -179,6 +207,9 @@
     </Compile>
     <EmbeddedResource Include="UI\frmDashboardAD.resx">
       <DependentUpon>frmDashboardAD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmFactoryHDashboard.resx">
+      <DependentUpon>frmFactoryHDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

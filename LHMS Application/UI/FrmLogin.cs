@@ -55,7 +55,7 @@ namespace LHMS_Application.UI
                     case "Factory Head":
                         {
                             //display user Dashboard
-                            frmDashboardAD user = new frmDashboardAD();
+                            frmFactoryHDashboard user = new frmFactoryHDashboard();
                             user.Show();
                             this.Hide();
                         }
