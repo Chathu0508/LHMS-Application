@@ -99,6 +99,7 @@
             // 
             // cmbtype
             // 
+            this.cmbtype.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbtype.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbtype.FormattingEnabled = true;
             this.cmbtype.Items.AddRange(new object[] {

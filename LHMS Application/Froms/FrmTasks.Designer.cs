@@ -74,7 +74,7 @@
             // lblDapertment
             // 
             this.lblDapertment.AutoSize = true;
-            this.lblDapertment.Location = new System.Drawing.Point(40, 301);
+            this.lblDapertment.Location = new System.Drawing.Point(40, 297);
             this.lblDapertment.Name = "lblDapertment";
             this.lblDapertment.Size = new System.Drawing.Size(77, 16);
             this.lblDapertment.TabIndex = 3;
@@ -115,6 +115,7 @@
             // 
             // cmbFactory
             // 
+            this.cmbFactory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbFactory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFactory.FormattingEnabled = true;
             this.cmbFactory.Items.AddRange(new object[] {
@@ -128,6 +129,7 @@
             // 
             // cmbDevepartment
             // 
+            this.cmbDevepartment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbDevepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDevepartment.FormattingEnabled = true;
             this.cmbDevepartment.Items.AddRange(new object[] {
@@ -140,7 +142,7 @@
             "Engineering Design ",
             "Engineering",
             "Factory Management"});
-            this.cmbDevepartment.Location = new System.Drawing.Point(156, 297);
+            this.cmbDevepartment.Location = new System.Drawing.Point(156, 293);
             this.cmbDevepartment.Name = "cmbDevepartment";
             this.cmbDevepartment.Size = new System.Drawing.Size(275, 25);
             this.cmbDevepartment.TabIndex = 29;
@@ -152,7 +154,7 @@
             this.btnAddtask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddtask.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddtask.ForeColor = System.Drawing.Color.White;
-            this.btnAddtask.Location = new System.Drawing.Point(43, 353);
+            this.btnAddtask.Location = new System.Drawing.Point(43, 406);
             this.btnAddtask.Name = "btnAddtask";
             this.btnAddtask.Size = new System.Drawing.Size(388, 44);
             this.btnAddtask.TabIndex = 30;
@@ -167,7 +169,7 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(43, 416);
+            this.btnDelete.Location = new System.Drawing.Point(43, 469);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(388, 34);
             this.btnDelete.TabIndex = 31;
@@ -182,14 +184,14 @@
             this.dgvtasks.Name = "dgvtasks";
             this.dgvtasks.RowHeadersWidth = 51;
             this.dgvtasks.RowTemplate.Height = 24;
-            this.dgvtasks.Size = new System.Drawing.Size(638, 384);
+            this.dgvtasks.Size = new System.Drawing.Size(638, 574);
             this.dgvtasks.TabIndex = 32;
             // 
             // FrmTasks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1124, 478);
+            this.ClientSize = new System.Drawing.Size(1124, 669);
             this.Controls.Add(this.dgvtasks);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAddtask);
@@ -206,6 +208,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmTasks";
             this.Text = "Tasks Details";
+            this.Load += new System.EventHandler(this.FrmTasks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvtasks)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

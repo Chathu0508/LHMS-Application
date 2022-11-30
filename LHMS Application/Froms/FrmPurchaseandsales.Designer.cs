@@ -1,6 +1,6 @@
 ﻿namespace LHMS_Application.Froms
 {
-    partial class FrmPurchase
+    partial class FrmPurchaseandsales
     {
         /// <summary>
         /// Required designer variable.
@@ -30,10 +30,10 @@
         {
             this.lblheading = new System.Windows.Forms.Panel();
             this.dtmbilldate = new System.Windows.Forms.DateTimePicker();
-            this.txtaddress = new System.Windows.Forms.TextBox();
-            this.txtcontact = new System.Windows.Forms.TextBox();
-            this.txtemail = new System.Windows.Forms.TextBox();
-            this.txtname = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtContact = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.lblBilldate = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblAddress = new System.Windows.Forms.Label();
@@ -41,14 +41,14 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblsearch = new System.Windows.Forms.Label();
-            this.lblDeaCustD = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnadd = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.lblname2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtnames = new System.Windows.Forms.TextBox();
             this.txtsearchs = new System.Windows.Forms.TextBox();
             this.lblqty = new System.Windows.Forms.Label();
             this.lblrate = new System.Windows.Forms.Label();
@@ -59,6 +59,13 @@
             this.dgvProductsadd = new System.Windows.Forms.DataGridView();
             this.lbladdproduc = new System.Windows.Forms.Label();
             this.pnlcalucation = new System.Windows.Forms.Panel();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.txtreturnamount = new System.Windows.Forms.TextBox();
+            this.txtPayAmount = new System.Windows.Forms.TextBox();
+            this.txtGrandTotal = new System.Windows.Forms.TextBox();
+            this.txtvat = new System.Windows.Forms.TextBox();
+            this.txtdiscount = new System.Windows.Forms.TextBox();
+            this.txtSubTotal = new System.Windows.Forms.TextBox();
             this.lblReamount = new System.Windows.Forms.Label();
             this.lblpayamount = new System.Windows.Forms.Label();
             this.lbltotal = new System.Windows.Forms.Label();
@@ -66,27 +73,23 @@
             this.lblDisvount = new System.Windows.Forms.Label();
             this.lblSub = new System.Windows.Forms.Label();
             this.lblcal = new System.Windows.Forms.Label();
-            this.txtSubTotal = new System.Windows.Forms.TextBox();
-            this.txtdiscount = new System.Windows.Forms.TextBox();
-            this.txtvat = new System.Windows.Forms.TextBox();
-            this.txtGrandTotal = new System.Windows.Forms.TextBox();
-            this.txtPayAmount = new System.Windows.Forms.TextBox();
-            this.txtreturnamount = new System.Windows.Forms.TextBox();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lbltop = new System.Windows.Forms.Label();
             this.lblheading.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnldatagrideview.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductsadd)).BeginInit();
             this.pnlcalucation.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblheading
             // 
             this.lblheading.Controls.Add(this.dtmbilldate);
-            this.lblheading.Controls.Add(this.txtaddress);
-            this.lblheading.Controls.Add(this.txtcontact);
-            this.lblheading.Controls.Add(this.txtemail);
-            this.lblheading.Controls.Add(this.txtname);
+            this.lblheading.Controls.Add(this.txtAddress);
+            this.lblheading.Controls.Add(this.txtContact);
+            this.lblheading.Controls.Add(this.txtEmail);
+            this.lblheading.Controls.Add(this.txtName);
             this.lblheading.Controls.Add(this.lblBilldate);
             this.lblheading.Controls.Add(this.txtSearch);
             this.lblheading.Controls.Add(this.lblAddress);
@@ -94,8 +97,8 @@
             this.lblheading.Controls.Add(this.lblEmail);
             this.lblheading.Controls.Add(this.lblName);
             this.lblheading.Controls.Add(this.lblsearch);
-            this.lblheading.Controls.Add(this.lblDeaCustD);
-            this.lblheading.Location = new System.Drawing.Point(0, 0);
+            this.lblheading.Controls.Add(this.lblTitle);
+            this.lblheading.Location = new System.Drawing.Point(0, 65);
             this.lblheading.Name = "lblheading";
             this.lblheading.Size = new System.Drawing.Size(1399, 156);
             this.lblheading.TabIndex = 0;
@@ -109,42 +112,42 @@
             this.dtmbilldate.Size = new System.Drawing.Size(264, 26);
             this.dtmbilldate.TabIndex = 13;
             // 
-            // txtaddress
+            // txtAddress
             // 
-            this.txtaddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtaddress.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtaddress.Location = new System.Drawing.Point(772, 42);
-            this.txtaddress.Multiline = true;
-            this.txtaddress.Name = "txtaddress";
-            this.txtaddress.Size = new System.Drawing.Size(227, 89);
-            this.txtaddress.TabIndex = 12;
+            this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAddress.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(772, 42);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(227, 89);
+            this.txtAddress.TabIndex = 12;
             // 
-            // txtcontact
+            // txtContact
             // 
-            this.txtcontact.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtcontact.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcontact.Location = new System.Drawing.Point(421, 105);
-            this.txtcontact.Name = "txtcontact";
-            this.txtcontact.Size = new System.Drawing.Size(227, 26);
-            this.txtcontact.TabIndex = 11;
+            this.txtContact.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtContact.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContact.Location = new System.Drawing.Point(421, 105);
+            this.txtContact.Name = "txtContact";
+            this.txtContact.Size = new System.Drawing.Size(227, 26);
+            this.txtContact.TabIndex = 11;
             // 
-            // txtemail
+            // txtEmail
             // 
-            this.txtemail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtemail.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtemail.Location = new System.Drawing.Point(421, 42);
-            this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(227, 26);
-            this.txtemail.TabIndex = 10;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(421, 42);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(227, 26);
+            this.txtEmail.TabIndex = 10;
             // 
-            // txtname
+            // txtName
             // 
-            this.txtname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtname.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtname.Location = new System.Drawing.Point(95, 105);
-            this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(227, 26);
-            this.txtname.TabIndex = 9;
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtName.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(95, 105);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(227, 26);
+            this.txtName.TabIndex = 9;
             // 
             // lblBilldate
             // 
@@ -164,6 +167,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(227, 26);
             this.txtSearch.TabIndex = 6;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // lblAddress
             // 
@@ -215,15 +219,15 @@
             this.lblsearch.TabIndex = 1;
             this.lblsearch.Text = "Search";
             // 
-            // lblDeaCustD
+            // lblTitle
             // 
-            this.lblDeaCustD.AutoSize = true;
-            this.lblDeaCustD.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeaCustD.Location = new System.Drawing.Point(12, 9);
-            this.lblDeaCustD.Name = "lblDeaCustD";
-            this.lblDeaCustD.Size = new System.Drawing.Size(262, 22);
-            this.lblDeaCustD.TabIndex = 0;
-            this.lblDeaCustD.Text = "Dealer and Customer Deatils";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(12, 9);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(262, 22);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Dealer and Customer Deatils";
             // 
             // panel1
             // 
@@ -232,14 +236,14 @@
             this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.lblname2);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtnames);
             this.panel1.Controls.Add(this.txtsearchs);
             this.panel1.Controls.Add(this.lblqty);
             this.panel1.Controls.Add(this.lblrate);
             this.panel1.Controls.Add(this.lblinv);
             this.panel1.Controls.Add(this.lblSearch2);
             this.panel1.Controls.Add(this.lblProdutD);
-            this.panel1.Location = new System.Drawing.Point(0, 156);
+            this.panel1.Location = new System.Drawing.Point(0, 221);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1399, 123);
             this.panel1.TabIndex = 1;
@@ -295,14 +299,14 @@
             this.lblname2.TabIndex = 20;
             this.lblname2.Text = "Name";
             // 
-            // textBox2
+            // txtnames
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(336, 54);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(234, 26);
-            this.textBox2.TabIndex = 19;
+            this.txtnames.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtnames.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnames.Location = new System.Drawing.Point(336, 54);
+            this.txtnames.Name = "txtnames";
+            this.txtnames.Size = new System.Drawing.Size(234, 26);
+            this.txtnames.TabIndex = 19;
             // 
             // txtsearchs
             // 
@@ -367,7 +371,7 @@
             // 
             this.pnldatagrideview.Controls.Add(this.dgvProductsadd);
             this.pnldatagrideview.Controls.Add(this.lbladdproduc);
-            this.pnldatagrideview.Location = new System.Drawing.Point(0, 279);
+            this.pnldatagrideview.Location = new System.Drawing.Point(0, 344);
             this.pnldatagrideview.Name = "pnldatagrideview";
             this.pnldatagrideview.Size = new System.Drawing.Size(787, 386);
             this.pnldatagrideview.TabIndex = 2;
@@ -410,10 +414,77 @@
             this.pnlcalucation.Controls.Add(this.lblDisvount);
             this.pnlcalucation.Controls.Add(this.lblSub);
             this.pnlcalucation.Controls.Add(this.lblcal);
-            this.pnlcalucation.Location = new System.Drawing.Point(788, 279);
+            this.pnlcalucation.Location = new System.Drawing.Point(788, 344);
             this.pnlcalucation.Name = "pnlcalucation";
             this.pnlcalucation.Size = new System.Drawing.Size(611, 386);
             this.pnlcalucation.TabIndex = 3;
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(402, 318);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(197, 44);
+            this.btnSave.TabIndex = 13;
+            this.btnSave.Text = "Save Detials";
+            this.btnSave.UseVisualStyleBackColor = false;
+            // 
+            // txtreturnamount
+            // 
+            this.txtreturnamount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtreturnamount.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtreturnamount.Location = new System.Drawing.Point(208, 280);
+            this.txtreturnamount.Name = "txtreturnamount";
+            this.txtreturnamount.Size = new System.Drawing.Size(391, 26);
+            this.txtreturnamount.TabIndex = 12;
+            // 
+            // txtPayAmount
+            // 
+            this.txtPayAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPayAmount.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPayAmount.Location = new System.Drawing.Point(208, 232);
+            this.txtPayAmount.Name = "txtPayAmount";
+            this.txtPayAmount.Size = new System.Drawing.Size(391, 26);
+            this.txtPayAmount.TabIndex = 11;
+            // 
+            // txtGrandTotal
+            // 
+            this.txtGrandTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtGrandTotal.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGrandTotal.Location = new System.Drawing.Point(208, 182);
+            this.txtGrandTotal.Name = "txtGrandTotal";
+            this.txtGrandTotal.Size = new System.Drawing.Size(391, 26);
+            this.txtGrandTotal.TabIndex = 10;
+            // 
+            // txtvat
+            // 
+            this.txtvat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtvat.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtvat.Location = new System.Drawing.Point(208, 134);
+            this.txtvat.Name = "txtvat";
+            this.txtvat.Size = new System.Drawing.Size(391, 26);
+            this.txtvat.TabIndex = 9;
+            // 
+            // txtdiscount
+            // 
+            this.txtdiscount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtdiscount.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdiscount.Location = new System.Drawing.Point(208, 91);
+            this.txtdiscount.Name = "txtdiscount";
+            this.txtdiscount.Size = new System.Drawing.Size(391, 26);
+            this.txtdiscount.TabIndex = 8;
+            // 
+            // txtSubTotal
+            // 
+            this.txtSubTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSubTotal.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSubTotal.Location = new System.Drawing.Point(208, 48);
+            this.txtSubTotal.Name = "txtSubTotal";
+            this.txtSubTotal.Size = new System.Drawing.Size(391, 26);
+            this.txtSubTotal.TabIndex = 7;
             // 
             // lblReamount
             // 
@@ -485,85 +556,37 @@
             this.lblcal.TabIndex = 0;
             this.lblcal.Text = "Calculation Detials";
             // 
-            // txtSubTotal
+            // panel2
             // 
-            this.txtSubTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSubTotal.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSubTotal.Location = new System.Drawing.Point(208, 48);
-            this.txtSubTotal.Name = "txtSubTotal";
-            this.txtSubTotal.Size = new System.Drawing.Size(391, 26);
-            this.txtSubTotal.TabIndex = 7;
+            this.panel2.Controls.Add(this.lbltop);
+            this.panel2.Location = new System.Drawing.Point(0, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1399, 56);
+            this.panel2.TabIndex = 4;
             // 
-            // txtdiscount
+            // lbltop
             // 
-            this.txtdiscount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtdiscount.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdiscount.Location = new System.Drawing.Point(208, 91);
-            this.txtdiscount.Name = "txtdiscount";
-            this.txtdiscount.Size = new System.Drawing.Size(391, 26);
-            this.txtdiscount.TabIndex = 8;
+            this.lbltop.AutoSize = true;
+            this.lbltop.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltop.Location = new System.Drawing.Point(9, 10);
+            this.lbltop.Name = "lbltop";
+            this.lbltop.Size = new System.Drawing.Size(291, 34);
+            this.lbltop.TabIndex = 14;
+            this.lbltop.Text = "Purchases and Sales";
             // 
-            // txtvat
-            // 
-            this.txtvat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtvat.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtvat.Location = new System.Drawing.Point(208, 134);
-            this.txtvat.Name = "txtvat";
-            this.txtvat.Size = new System.Drawing.Size(391, 26);
-            this.txtvat.TabIndex = 9;
-            // 
-            // txtGrandTotal
-            // 
-            this.txtGrandTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtGrandTotal.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGrandTotal.Location = new System.Drawing.Point(208, 182);
-            this.txtGrandTotal.Name = "txtGrandTotal";
-            this.txtGrandTotal.Size = new System.Drawing.Size(391, 26);
-            this.txtGrandTotal.TabIndex = 10;
-            // 
-            // txtPayAmount
-            // 
-            this.txtPayAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPayAmount.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPayAmount.Location = new System.Drawing.Point(208, 232);
-            this.txtPayAmount.Name = "txtPayAmount";
-            this.txtPayAmount.Size = new System.Drawing.Size(391, 26);
-            this.txtPayAmount.TabIndex = 11;
-            // 
-            // txtreturnamount
-            // 
-            this.txtreturnamount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtreturnamount.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtreturnamount.Location = new System.Drawing.Point(208, 280);
-            this.txtreturnamount.Name = "txtreturnamount";
-            this.txtreturnamount.Size = new System.Drawing.Size(391, 26);
-            this.txtreturnamount.TabIndex = 12;
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(402, 318);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(197, 44);
-            this.btnSave.TabIndex = 13;
-            this.btnSave.Text = "Save Detials";
-            this.btnSave.UseVisualStyleBackColor = false;
-            // 
-            // FrmPurchase
+            // FrmPurchaseandsales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1399, 665);
+            this.ClientSize = new System.Drawing.Size(1399, 731);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlcalucation);
             this.Controls.Add(this.pnldatagrideview);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblheading);
-            this.Name = "FrmPurchase";
-            this.Text = "FrmPurchase";
+            this.Name = "FrmPurchaseandsales";
+            this.Load += new System.EventHandler(this.FrmPurchase_Load);
             this.lblheading.ResumeLayout(false);
             this.lblheading.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -573,6 +596,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductsadd)).EndInit();
             this.pnlcalucation.ResumeLayout(false);
             this.pnlcalucation.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -580,12 +605,12 @@
         #endregion
 
         private System.Windows.Forms.Panel lblheading;
-        private System.Windows.Forms.Label lblDeaCustD;
+        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.DateTimePicker dtmbilldate;
-        private System.Windows.Forms.TextBox txtaddress;
-        private System.Windows.Forms.TextBox txtcontact;
-        private System.Windows.Forms.TextBox txtemail;
-        private System.Windows.Forms.TextBox txtname;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtContact;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblBilldate;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label lblAddress;
@@ -595,7 +620,7 @@
         private System.Windows.Forms.Label lblsearch;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblProdutD;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtnames;
         private System.Windows.Forms.TextBox txtsearchs;
         private System.Windows.Forms.Label lblqty;
         private System.Windows.Forms.Label lblrate;
@@ -624,5 +649,7 @@
         private System.Windows.Forms.TextBox txtvat;
         private System.Windows.Forms.TextBox txtdiscount;
         private System.Windows.Forms.TextBox txtSubTotal;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lbltop;
     }
 }
