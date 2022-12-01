@@ -44,6 +44,12 @@ namespace LHMS_Application.Froms
                 txtAddress.Text = "";
             }
 
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string keyword = txtSearch.Text;
             //write the code to get the details and values on text 
             dealcusBll dc = dcdal.SearchDealerCustomerFortransaction(keyword);
 
@@ -52,7 +58,6 @@ namespace LHMS_Application.Froms
             txtEmail.Text = dc.email;
             txtContact.Text = dc.contact;
             txtAddress.Text = dc.address;
-
         }
     }
 }

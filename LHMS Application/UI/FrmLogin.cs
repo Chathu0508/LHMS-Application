@@ -61,10 +61,19 @@ namespace LHMS_Application.UI
                         }
                         break;
 
-                    case "DE":
+                    case "Department Head":
                         {
                             //display user Dashboard
-                            frmDashboardAD user = new frmDashboardAD();
+                            frmDepartmentHDashboard user = new frmDepartmentHDashboard();
+                            user.Show();
+                            this.Hide();
+                        }
+                        break;
+
+                    case "Supervisor":
+                        {
+                            //display user Dashboard
+                            frmSupervsorDashboard user = new frmSupervsorDashboard();
                             user.Show();
                             this.Hide();
                         }

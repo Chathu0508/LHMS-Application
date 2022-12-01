@@ -249,7 +249,7 @@ namespace LHMS_Application.Dal
         }
         #endregion
         #region Serach the Dealer & customer for taranaction details
-        public dealcusBll SearchDealerCustomerFortransaction (string keyword)
+        public dealcusBll SearchDealerCustomerFortransaction(string keyword)
         {
             //creat a object for deacustbLl
             dealcusBll dc = new dealcusBll();
@@ -262,7 +262,8 @@ namespace LHMS_Application.Dal
             try
             {
                 //wirte a sql qurry to  search the dealer or customer bassed on the keyword.
-                string sql = "SELECT name, email, contact, address, from tbl_dea_cust WHERE id like '%" + keyword + "%' OR name LIKE '%" + keyword + "%' ";
+
+                string sql = "SELECT * from tbl_dea_cust WHERE id =" + keyword ;
 
                 //create sql dataadpter to excute the queary
                 SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
@@ -274,16 +275,16 @@ namespace LHMS_Application.Dal
                 adapter.Fill(dt);
 
                 //if we have value  on ythe dt we need to save it in dealcustomer bll
-                if(dt.Rows.Count > 0)
+                if (dt.Rows.Count > 0)
                 {
-                    dc.name = dt.Rows[0]["name"].ToString();
-                    dc.email = dt.Rows[1]["email"].ToString();
-                    dc.contact = dt.Rows[2]["contact"].ToString();
-                    dc.address = dt.Rows[3]["address"].ToString();
+                    dc.name = dt.Rows[0]["name"]!=""? dt.Rows[0]["name"].ToString() : "";
+                    dc.email = dt.Rows[0]["email"] != "" ? dt.Rows[0]["email"].ToString() : "";
+                    dc.contact = dt.Rows[0]["contact"] != "" ? dt.Rows[0]["contact"].ToString() : "";
+                    dc.address = dt.Rows[0]["address"] != "" ? dt.Rows[0]["address"].ToString():"";
                 }
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }

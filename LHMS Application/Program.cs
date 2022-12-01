@@ -1,4 +1,5 @@
 ﻿using LHMS_Application.Forms;
+using LHMS_Application.Froms;
 using LHMS_Application.UI;
 using System;
 using System.Collections.Generic;
@@ -19,10 +20,11 @@ namespace LHMS_Application
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new FrmOpening());
-            //Application.Run(new FrmLogin());
+            Application.Run(new FrmLogin());
             //Application.Run(new frmDashboardAD());
             //Application.Run(new frmFactoryHDashboard());
-            Application.Run(new frmDepartmentHDashboard());
+            //Application.Run(new frmDepartmentHDashboard());
+            //Application.Run(new frmSupervsorDashboard());
         }
     }
 }
