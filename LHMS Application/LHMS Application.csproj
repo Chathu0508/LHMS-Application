@@ -52,7 +52,9 @@
     <Compile Include="BLL\loginBll.cs" />
     <Compile Include="BLL\productBll.cs" />
     <Compile Include="BLL\taskBLL.cs" />
+    <Compile Include="BLL\tracklogBll.cs" />
     <Compile Include="BLL\transactionalDetailsBll.cs" />
+    <Compile Include="Dal\tracklogDal.cs" />
     <Compile Include="Dal\transactionDal.cs" />
     <Compile Include="BLL\transactionsBll.cs" />
     <Compile Include="BLL\UserBll.cs" />
@@ -74,12 +76,6 @@
     </Compile>
     <Compile Include="Froms\FrmDealersAndCustomer.Designer.cs">
       <DependentUpon>FrmDealersAndCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Froms\FrmfacUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Froms\FrmfacUser.Designer.cs">
-      <DependentUpon>FrmfacUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Froms\FrmFHUserS.cs">
       <SubType>Form</SubType>
@@ -144,6 +140,12 @@
     <Compile Include="UI\frmDashboardAD.Designer.cs">
       <DependentUpon>frmDashboardAD.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\frmDepartmentHDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmDepartmentHDashboard.Designer.cs">
+      <DependentUpon>frmDepartmentHDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\frmFactoryHDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +163,12 @@
     </Compile>
     <Compile Include="UI\FrmOpening.Designer.cs">
       <DependentUpon>FrmOpening.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmSupervsorDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmSupervsorDashboard.Designer.cs">
+      <DependentUpon>frmSupervsorDashboard.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Froms\FrmCategory.resx">
       <DependentUpon>FrmCategory.cs</DependentUpon>
@@ -208,6 +216,9 @@
     <EmbeddedResource Include="UI\frmDashboardAD.resx">
       <DependentUpon>frmDashboardAD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmDepartmentHDashboard.resx">
+      <DependentUpon>frmDepartmentHDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\frmFactoryHDashboard.resx">
       <DependentUpon>frmFactoryHDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmOpening.resx">
       <DependentUpon>FrmOpening.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmSupervsorDashboard.resx">
+      <DependentUpon>frmSupervsorDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

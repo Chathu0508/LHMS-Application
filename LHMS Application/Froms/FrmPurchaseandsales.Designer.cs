@@ -75,6 +75,7 @@
             this.lblcal = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbltop = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.lblheading.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnldatagrideview.SuspendLayout();
@@ -85,6 +86,7 @@
             // 
             // lblheading
             // 
+            this.lblheading.Controls.Add(this.button1);
             this.lblheading.Controls.Add(this.dtmbilldate);
             this.lblheading.Controls.Add(this.txtAddress);
             this.lblheading.Controls.Add(this.txtContact);
@@ -116,7 +118,7 @@
             // 
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAddress.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(772, 42);
+            this.txtAddress.Location = new System.Drawing.Point(801, 42);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(227, 89);
@@ -135,7 +137,7 @@
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(421, 42);
+            this.txtEmail.Location = new System.Drawing.Point(487, 45);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(227, 26);
             this.txtEmail.TabIndex = 10;
@@ -173,7 +175,7 @@
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(680, 44);
+            this.lblAddress.Location = new System.Drawing.Point(720, 44);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(67, 20);
             this.lblAddress.TabIndex = 5;
@@ -193,7 +195,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(338, 44);
+            this.lblEmail.Location = new System.Drawing.Point(404, 47);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(46, 20);
             this.lblEmail.TabIndex = 3;
@@ -574,6 +576,17 @@
             this.lbltop.TabIndex = 14;
             this.lbltop.Text = "Purchases and Sales";
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Location = new System.Drawing.Point(342, 42);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(36, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmPurchaseandsales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -651,5 +664,6 @@
         private System.Windows.Forms.TextBox txtSubTotal;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbltop;
+        private System.Windows.Forms.Button button1;
     }
 }
