@@ -10,9 +10,9 @@ namespace LHMS_Application.BLL
     {
         public int id { get; set; }
         public int taskId { get; set; }
-        public string numberofstages { get; set; }
+        public int numberofstages { get; set; }
         public string completesatges { get; set; }
-        public string pendingsatges { get; set; }
+        public int pendingsatges { get; set; }
         public DateTime added_date { get; set; }
         public int add_by { get; set; }
     }

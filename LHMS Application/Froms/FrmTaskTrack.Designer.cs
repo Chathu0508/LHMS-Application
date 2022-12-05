@@ -41,8 +41,6 @@
             this.txtcompletesatges = new System.Windows.Forms.TextBox();
             this.lblcompletesatges = new System.Windows.Forms.Label();
             this.btnadd = new System.Windows.Forms.Button();
-            this.btnupdate = new System.Windows.Forms.Button();
-            this.btndelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTasks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTasklog)).BeginInit();
             this.SuspendLayout();
@@ -184,42 +182,12 @@
             this.btnadd.UseVisualStyleBackColor = false;
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
-            // btnupdate
-            // 
-            this.btnupdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            this.btnupdate.FlatAppearance.BorderSize = 0;
-            this.btnupdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnupdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnupdate.ForeColor = System.Drawing.Color.White;
-            this.btnupdate.Location = new System.Drawing.Point(43, 500);
-            this.btnupdate.Name = "btnupdate";
-            this.btnupdate.Size = new System.Drawing.Size(383, 52);
-            this.btnupdate.TabIndex = 23;
-            this.btnupdate.Text = "Update Tarck";
-            this.btnupdate.UseVisualStyleBackColor = false;
-            // 
-            // btndelete
-            // 
-            this.btndelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            this.btndelete.FlatAppearance.BorderSize = 0;
-            this.btndelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btndelete.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndelete.ForeColor = System.Drawing.Color.White;
-            this.btndelete.Location = new System.Drawing.Point(43, 558);
-            this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(383, 52);
-            this.btndelete.TabIndex = 24;
-            this.btndelete.Text = "Delete Tarck";
-            this.btndelete.UseVisualStyleBackColor = false;
-            // 
             // FrmTaskTrack
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(940, 633);
-            this.Controls.Add(this.btndelete);
-            this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.btnadd);
             this.Controls.Add(this.txtcompletesatges);
             this.Controls.Add(this.lblcompletesatges);
@@ -258,7 +226,5 @@
         private System.Windows.Forms.TextBox txtcompletesatges;
         private System.Windows.Forms.Label lblcompletesatges;
         private System.Windows.Forms.Button btnadd;
-        private System.Windows.Forms.Button btnupdate;
-        private System.Windows.Forms.Button btndelete;
     }
 }

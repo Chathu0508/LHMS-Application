@@ -25,6 +25,7 @@ namespace LHMS_Application
             //Application.Run(new frmFactoryHDashboard());
             //Application.Run(new frmDepartmentHDashboard());
             //Application.Run(new frmSupervsorDashboard());
+            //Application.Run(new FrmTaskTrack());
         }
     }
 }

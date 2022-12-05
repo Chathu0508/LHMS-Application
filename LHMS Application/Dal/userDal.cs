@@ -110,7 +110,7 @@ namespace LHMS_Application.Dal
 
         }
         #endregion
-        #region get thw
+        #region Geth the Username Id Mehtod
         public UserBll GetIDFromUsername(string username)
         {
             UserBll u = new UserBll();
