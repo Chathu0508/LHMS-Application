@@ -20,11 +20,11 @@ namespace LHMS_Application
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new FrmOpening());
-            Application.Run(new FrmLogin());
+            //Application.Run(new FrmLogin());
             //Application.Run(new frmDashboardAD());
             //Application.Run(new frmFactoryHDashboard());
             //Application.Run(new frmDepartmentHDashboard());
-            //Application.Run(new frmSupervsorDashboard());
+            Application.Run(new frmSupervsorDashboard());
             //Application.Run(new FrmTaskTrack());
         }
     }

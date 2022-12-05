@@ -201,6 +201,7 @@
             this.Controls.Add(this.lbltaskID);
             this.Controls.Add(this.dgvTasklog);
             this.Controls.Add(this.dgvTasks);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmTaskTrack";
             this.Text = "FrmTaskTrack";
             this.Load += new System.EventHandler(this.FrmTaskTrack_Load);
