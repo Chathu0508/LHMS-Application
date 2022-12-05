@@ -65,9 +65,10 @@ namespace LHMS_Application.Froms
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-            tb.taskId = int.Parse(txtTaskid.Text);
+            tb.taskId = Convert.ToInt32(txtTaskid.Text);
+            tb.numberofstages = Convert.ToInt32(txtnumberofstages.Text);
             tb.completesatges = txtnumberofstages.Text;
-            tb.pendingsatges = txtpendingsatges.Text;
+            tb.pendingsatges = Convert.ToInt32(txtpendingsatges.Text);
             tb.added_date = DateTime.Now;
 
             string loggedUser = FrmLogin.LoggedIn;
@@ -79,7 +80,7 @@ namespace LHMS_Application.Froms
 
             if (success == true)
             {
-                MessageBox.Show("New Category Inserted successfully.");
+                MessageBox.Show("Successfully Update Daily Tasks .");
 
                 clear();
 
@@ -88,7 +89,7 @@ namespace LHMS_Application.Froms
             }
             else
             {
-                MessageBox.Show("New Category Inserted Failed.");
+                MessageBox.Show("Fail to Update the Daily Tasks.");
             }
 
         }

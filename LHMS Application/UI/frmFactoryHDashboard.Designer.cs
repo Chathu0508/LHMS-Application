@@ -29,19 +29,21 @@
         private void InitializeComponent()
         {
             this.pnlmenu = new System.Windows.Forms.Panel();
-            this.pnllogo = new System.Windows.Forms.Panel();
-            this.pnlTitleBar = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.panelDesktopPanal = new System.Windows.Forms.Panel();
-            this.btncloseChildFrom = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
+            this.pnllogo = new System.Windows.Forms.Panel();
+            this.pnlTitleBar = new System.Windows.Forms.Panel();
             this.btnMinimize = new System.Windows.Forms.Button();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.btnMaximize = new System.Windows.Forms.Button();
+            this.btncloseChildFrom = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.panelDesktopPanal = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlmenu.SuspendLayout();
+            this.pnllogo.SuspendLayout();
             this.pnlTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,62 +60,6 @@
             this.pnlmenu.Name = "pnlmenu";
             this.pnlmenu.Size = new System.Drawing.Size(220, 573);
             this.pnlmenu.TabIndex = 0;
-            // 
-            // pnllogo
-            // 
-            this.pnllogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(56)))));
-            this.pnllogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnllogo.Location = new System.Drawing.Point(0, 0);
-            this.pnllogo.Name = "pnllogo";
-            this.pnllogo.Size = new System.Drawing.Size(220, 80);
-            this.pnllogo.TabIndex = 0;
-            // 
-            // pnlTitleBar
-            // 
-            this.pnlTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(149)))));
-            this.pnlTitleBar.Controls.Add(this.btnMinimize);
-            this.pnlTitleBar.Controls.Add(this.lblTitle);
-            this.pnlTitleBar.Controls.Add(this.btnMaximize);
-            this.pnlTitleBar.Controls.Add(this.btncloseChildFrom);
-            this.pnlTitleBar.Controls.Add(this.btnClose);
-            this.pnlTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTitleBar.Location = new System.Drawing.Point(220, 0);
-            this.pnlTitleBar.Name = "pnlTitleBar";
-            this.pnlTitleBar.Size = new System.Drawing.Size(862, 80);
-            this.pnlTitleBar.TabIndex = 1;
-            this.pnlTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTitleBar_MouseDown);
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(403, 28);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(108, 22);
-            this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "Dashboard";
-            // 
-            // panelDesktopPanal
-            // 
-            this.panelDesktopPanal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktopPanal.Location = new System.Drawing.Point(220, 80);
-            this.panelDesktopPanal.Name = "panelDesktopPanal";
-            this.panelDesktopPanal.Size = new System.Drawing.Size(862, 493);
-            this.panelDesktopPanal.TabIndex = 2;
-            // 
-            // btncloseChildFrom
-            // 
-            this.btncloseChildFrom.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btncloseChildFrom.FlatAppearance.BorderSize = 0;
-            this.btncloseChildFrom.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btncloseChildFrom.Image = global::LHMS_Application.Properties.Resources.close__1_;
-            this.btncloseChildFrom.Location = new System.Drawing.Point(0, 0);
-            this.btncloseChildFrom.Name = "btncloseChildFrom";
-            this.btncloseChildFrom.Size = new System.Drawing.Size(75, 80);
-            this.btncloseChildFrom.TabIndex = 0;
-            this.btncloseChildFrom.UseVisualStyleBackColor = true;
-            this.btncloseChildFrom.Click += new System.EventHandler(this.btncloseChildFrom_Click);
             // 
             // button3
             // 
@@ -184,6 +130,31 @@
             this.btnUser.UseVisualStyleBackColor = true;
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
+            // pnllogo
+            // 
+            this.pnllogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(56)))));
+            this.pnllogo.Controls.Add(this.label1);
+            this.pnllogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnllogo.Location = new System.Drawing.Point(0, 0);
+            this.pnllogo.Name = "pnllogo";
+            this.pnllogo.Size = new System.Drawing.Size(220, 80);
+            this.pnllogo.TabIndex = 0;
+            // 
+            // pnlTitleBar
+            // 
+            this.pnlTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(149)))));
+            this.pnlTitleBar.Controls.Add(this.btnMinimize);
+            this.pnlTitleBar.Controls.Add(this.lblTitle);
+            this.pnlTitleBar.Controls.Add(this.btnMaximize);
+            this.pnlTitleBar.Controls.Add(this.btncloseChildFrom);
+            this.pnlTitleBar.Controls.Add(this.btnClose);
+            this.pnlTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTitleBar.Location = new System.Drawing.Point(220, 0);
+            this.pnlTitleBar.Name = "pnlTitleBar";
+            this.pnlTitleBar.Size = new System.Drawing.Size(862, 80);
+            this.pnlTitleBar.TabIndex = 1;
+            this.pnlTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTitleBar_MouseDown);
+            // 
             // btnMinimize
             // 
             this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -198,6 +169,17 @@
             this.btnMinimize.Text = "O";
             this.btnMinimize.UseVisualStyleBackColor = true;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(90, 27);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(108, 22);
+            this.lblTitle.TabIndex = 1;
+            this.lblTitle.Text = "Dashboard";
             // 
             // btnMaximize
             // 
@@ -214,6 +196,19 @@
             this.btnMaximize.UseVisualStyleBackColor = true;
             this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
             // 
+            // btncloseChildFrom
+            // 
+            this.btncloseChildFrom.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btncloseChildFrom.FlatAppearance.BorderSize = 0;
+            this.btncloseChildFrom.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btncloseChildFrom.Image = global::LHMS_Application.Properties.Resources.close__1_;
+            this.btncloseChildFrom.Location = new System.Drawing.Point(0, 0);
+            this.btncloseChildFrom.Name = "btncloseChildFrom";
+            this.btncloseChildFrom.Size = new System.Drawing.Size(75, 80);
+            this.btncloseChildFrom.TabIndex = 0;
+            this.btncloseChildFrom.UseVisualStyleBackColor = true;
+            this.btncloseChildFrom.Click += new System.EventHandler(this.btncloseChildFrom_Click);
+            // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -229,6 +224,25 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // panelDesktopPanal
+            // 
+            this.panelDesktopPanal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktopPanal.Location = new System.Drawing.Point(220, 80);
+            this.panelDesktopPanal.Name = "panelDesktopPanal";
+            this.panelDesktopPanal.Size = new System.Drawing.Size(862, 493);
+            this.panelDesktopPanal.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(43, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(134, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "LockHood (Pvt) Ltd.";
+            // 
             // frmFactoryHDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -240,6 +254,8 @@
             this.Name = "frmFactoryHDashboard";
             this.Text = "frmFactoryHDashboard";
             this.pnlmenu.ResumeLayout(false);
+            this.pnllogo.ResumeLayout(false);
+            this.pnllogo.PerformLayout();
             this.pnlTitleBar.ResumeLayout(false);
             this.pnlTitleBar.PerformLayout();
             this.ResumeLayout(false);
@@ -261,5 +277,6 @@
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnMaximize;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label label1;
     }
 }

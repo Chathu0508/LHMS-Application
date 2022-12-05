@@ -197,7 +197,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(31, 37);
+            this.label1.Location = new System.Drawing.Point(63, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(134, 16);
             this.label1.TabIndex = 0;
@@ -283,7 +283,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(405, 20);
+            this.lblTitle.Location = new System.Drawing.Point(90, 24);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(291, 34);
             this.lblTitle.TabIndex = 0;
@@ -301,7 +301,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::LHMS_Application.Properties.Resources.LOGO;
-            this.pictureBox1.Location = new System.Drawing.Point(426, 120);
+            this.pictureBox1.Location = new System.Drawing.Point(186, 60);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(400, 300);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
