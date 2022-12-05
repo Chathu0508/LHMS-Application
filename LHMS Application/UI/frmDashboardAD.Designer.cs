@@ -65,19 +65,19 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 573);
+            this.panelMenu.Size = new System.Drawing.Size(220, 683);
             this.panelMenu.TabIndex = 0;
             // 
             // btnSetting
             // 
-            this.btnSetting.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSetting.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnSetting.FlatAppearance.BorderSize = 0;
             this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetting.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetting.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnSetting.Image = global::LHMS_Application.Properties.Resources.setting;
             this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.Location = new System.Drawing.Point(0, 380);
+            this.btnSetting.Location = new System.Drawing.Point(0, 623);
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.Size = new System.Drawing.Size(220, 60);
             this.btnSetting.TabIndex = 6;
@@ -295,7 +295,7 @@
             this.panelDesktopPanal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktopPanal.Location = new System.Drawing.Point(220, 80);
             this.panelDesktopPanal.Name = "panelDesktopPanal";
-            this.panelDesktopPanal.Size = new System.Drawing.Size(862, 493);
+            this.panelDesktopPanal.Size = new System.Drawing.Size(862, 603);
             this.panelDesktopPanal.TabIndex = 2;
             // 
             // pictureBox1
@@ -312,7 +312,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1082, 573);
+            this.ClientSize = new System.Drawing.Size(1082, 683);
             this.Controls.Add(this.panelDesktopPanal);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);

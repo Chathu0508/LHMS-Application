@@ -15,7 +15,7 @@ namespace LHMS_Application.Dal
     {
         static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
 
-        #region Select Method
+        #region Select task
         public DataTable Select()
         {
             SqlConnection conn = new SqlConnection(myconnstrng);
@@ -47,7 +47,7 @@ namespace LHMS_Application.Dal
         }
 
         #endregion
-        #region Insert Method
+        #region Insert tasks
         public bool Insert(taskBLL tc)
         {
             bool isSuccess = false;
@@ -96,63 +96,7 @@ namespace LHMS_Application.Dal
         }
 
         #endregion
-        #region Update method 
-        public bool Update(taskBLL tc)
-        {
-            // creating boolean variables and set its defulats 
-            bool isSuccess = false;
-
-            //Cretaing a SQL Connection. 
-            SqlConnection conn = new SqlConnection(myconnstrng);
-
-            try
-            {
-                //queary to update catagories.
-                string sql = "UPDATE tbl_task SET title=@title, description=@description, factory=@factory, departments=@departments, added_date=@added_date, added_by=@added_by WHERE id=@id";
-
-                //SQL command to pass the Values on Sql Queary
-                SqlCommand cmd = new SqlCommand(sql, conn);
-
-                //passing values using cmd
-                cmd.Parameters.AddWithValue("@title", tc.title);
-                cmd.Parameters.AddWithValue("@description", tc.description);
-                cmd.Parameters.AddWithValue("@factory", tc.factory);
-                cmd.Parameters.AddWithValue("@departments", tc.departments);
-                cmd.Parameters.AddWithValue("@added_date", tc.added_date);
-                cmd.Parameters.AddWithValue("@added_by", tc.added_by);
-                cmd.Parameters.AddWithValue("@id", tc.id);
-
-                //open the connection to database
-                conn.Open();
-
-                //create INT varibles to excuted queary
-                int rows = cmd.ExecuteNonQuery();
-
-                //if the queary excuted successfully then the value will be greater than zero
-                if (rows > 0)
-                {
-                    //Queary was success
-                    isSuccess = true;
-                }
-                else
-                {
-                    //faild the queary
-                    isSuccess = false;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-
-            return isSuccess;
-        }
-        #endregion
-        #region Delete Categories
+        #region Delete task
         public bool Delete(taskBLL t)
         {
             //Createing boolean variable and set its values to fales.

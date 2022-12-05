@@ -38,16 +38,10 @@ namespace LHMS_Application.Froms
             DataTable dtl = tdal.Select();
             dgvTasklog.DataSource = dtl;
 
-
         }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void dgvTasklog_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+
             int rowIndex = e.RowIndex;
             txtId.Text = dgvTasklog.Rows[rowIndex].Cells[00].Value.ToString();
             txtTaskid.Text = dgvTasklog.Rows[rowIndex].Cells[01].Value.ToString();

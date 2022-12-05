@@ -60,7 +60,7 @@ namespace LHMS_Application.Dal
             SqlConnection conn = new SqlConnection(myconnstrng);
             try
             {
-                string sql = "INSERT INTO task_log(taskid, numberofstages, completesatges, pendingsatges, added,date, add_by)VALUES(@taskid, @numberofstages, @completesatges, @pendingsatges, @added,date, @add_by)";
+                string sql = "INSERT INTO task_log(taskid, numberofstages, completesatges, pendingsatges, added_date, add_by)VALUES(@taskid, @numberofstages, @completesatges, @pendingsatges, @added_date, @add_by)";
                 SqlCommand cmd = new SqlCommand(sql, conn);
 
                 cmd.Parameters.AddWithValue("@taskid", tl.taskId);

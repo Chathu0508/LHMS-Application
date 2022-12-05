@@ -49,11 +49,13 @@
   <ItemGroup>
     <Compile Include="BLL\categoryBll.cs" />
     <Compile Include="BLL\dealcusBll.cs" />
+    <Compile Include="BLL\inventorybll.cs" />
     <Compile Include="BLL\loginBll.cs" />
     <Compile Include="BLL\productBll.cs" />
     <Compile Include="BLL\taskBLL.cs" />
     <Compile Include="BLL\tracklogBll.cs" />
     <Compile Include="BLL\transactionalDetailsBll.cs" />
+    <Compile Include="Dal\inventoryDal.cs" />
     <Compile Include="Dal\tracklogDal.cs" />
     <Compile Include="Dal\transactionDal.cs" />
     <Compile Include="BLL\transactionsBll.cs" />
@@ -124,6 +126,12 @@
     </Compile>
     <Compile Include="Froms\FrmSetting.Designer.cs">
       <DependentUpon>FrmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Froms\Frminvenroty_tracklog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\Frminvenroty_tracklog.Designer.cs">
+      <DependentUpon>Frminvenroty_tracklog.cs</DependentUpon>
     </Compile>
     <Compile Include="Froms\SampleTestUI.cs">
       <SubType>Form</SubType>
@@ -199,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Froms\FrmUsers.resx">
       <DependentUpon>FrmUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\Frminvenroty_tracklog.resx">
+      <DependentUpon>Frminvenroty_tracklog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Froms\SampleTestUI.resx">
       <DependentUpon>SampleTestUI.cs</DependentUpon>

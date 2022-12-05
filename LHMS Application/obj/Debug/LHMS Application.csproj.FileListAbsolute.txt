@@ -46,3 +46,4 @@ D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\L
 D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.Froms.FrmFHUserS.resources
 D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.UI.frmDepartmentHDashboard.resources
 D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.UI.frmSupervsorDashboard.resources
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.Froms.Frminvenroty_tracklog.resources
