@@ -27,7 +27,7 @@ namespace LHMS_Application.Dal
             try
             {
                 //SQL Query to check login
-                string sql = "SELECT * FROM tbl_UserD WHERE username=@username AND password=@password and user_type=@user_type";
+                string sql = "SELECT * FROM tbl_UserD WHERE username=@username AND password=@password AND user_type=@user_type";
 
                 //Creating SQL Command to pass value
                 SqlCommand cmd = new SqlCommand(sql, conn);
