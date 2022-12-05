@@ -53,6 +53,7 @@
             // 
             // dgvCatorgry
             // 
+            this.dgvCatorgry.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCatorgry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCatorgry.Location = new System.Drawing.Point(510, 12);
             this.dgvCatorgry.Name = "dgvCatorgry";
@@ -64,6 +65,7 @@
             // 
             // dgvproduct
             // 
+            this.dgvproduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvproduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvproduct.Location = new System.Drawing.Point(510, 262);
             this.dgvproduct.Name = "dgvproduct";
@@ -75,6 +77,9 @@
             // 
             // dgvInventory
             // 
+            this.dgvInventory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInventory.Location = new System.Drawing.Point(510, 512);
             this.dgvInventory.Name = "dgvInventory";
@@ -228,6 +233,7 @@
             this.btnadd.TabIndex = 17;
             this.btnadd.Text = "Add Details";
             this.btnadd.UseVisualStyleBackColor = true;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // Frminvenroty_tracklog
             // 

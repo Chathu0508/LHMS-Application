@@ -29,17 +29,18 @@
         private void InitializeComponent()
         {
             this.pnlmenu = new System.Windows.Forms.Panel();
+            this.btnInventory = new System.Windows.Forms.Button();
             this.btntask = new System.Windows.Forms.Button();
             this.pnllogo = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnltitle = new System.Windows.Forms.Panel();
-            this.lbltitle = new System.Windows.Forms.Label();
-            this.pnldashboard = new System.Windows.Forms.Panel();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnMaximize = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
             this.btncloseChildFrom = new System.Windows.Forms.Button();
-            this.btnInventory = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.lbltitle = new System.Windows.Forms.Label();
+            this.pnldashboard = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.pnlmenu.SuspendLayout();
             this.pnllogo.SuspendLayout();
             this.pnltitle.SuspendLayout();
@@ -48,6 +49,7 @@
             // pnlmenu
             // 
             this.pnlmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.pnlmenu.Controls.Add(this.btnLogout);
             this.pnlmenu.Controls.Add(this.btnInventory);
             this.pnlmenu.Controls.Add(this.btntask);
             this.pnlmenu.Controls.Add(this.pnllogo);
@@ -56,6 +58,21 @@
             this.pnlmenu.Name = "pnlmenu";
             this.pnlmenu.Size = new System.Drawing.Size(220, 679);
             this.pnlmenu.TabIndex = 0;
+            // 
+            // btnInventory
+            // 
+            this.btnInventory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInventory.FlatAppearance.BorderSize = 0;
+            this.btnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInventory.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInventory.ForeColor = System.Drawing.Color.White;
+            this.btnInventory.Location = new System.Drawing.Point(0, 141);
+            this.btnInventory.Name = "btnInventory";
+            this.btnInventory.Size = new System.Drawing.Size(220, 61);
+            this.btnInventory.TabIndex = 2;
+            this.btnInventory.Text = "Inventory Qty deatils";
+            this.btnInventory.UseVisualStyleBackColor = true;
+            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
             // 
             // btntask
             // 
@@ -82,6 +99,17 @@
             this.pnllogo.Size = new System.Drawing.Size(220, 80);
             this.pnllogo.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(54, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(134, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "LockHood (Pvt) Ltd.";
+            // 
             // pnltitle
             // 
             this.pnltitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(149)))));
@@ -96,25 +124,6 @@
             this.pnltitle.Size = new System.Drawing.Size(921, 80);
             this.pnltitle.TabIndex = 1;
             this.pnltitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnltitle_MouseDown);
-            // 
-            // lbltitle
-            // 
-            this.lbltitle.AutoSize = true;
-            this.lbltitle.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltitle.ForeColor = System.Drawing.Color.White;
-            this.lbltitle.Location = new System.Drawing.Point(339, 15);
-            this.lbltitle.Name = "lbltitle";
-            this.lbltitle.Size = new System.Drawing.Size(166, 34);
-            this.lbltitle.TabIndex = 0;
-            this.lbltitle.Text = "Dashboard";
-            // 
-            // pnldashboard
-            // 
-            this.pnldashboard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnldashboard.Location = new System.Drawing.Point(220, 80);
-            this.pnldashboard.Name = "pnldashboard";
-            this.pnldashboard.Size = new System.Drawing.Size(921, 599);
-            this.pnldashboard.TabIndex = 2;
             // 
             // btnMinimize
             // 
@@ -146,6 +155,18 @@
             this.btnMaximize.UseVisualStyleBackColor = true;
             this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
             // 
+            // btncloseChildFrom
+            // 
+            this.btncloseChildFrom.FlatAppearance.BorderSize = 0;
+            this.btncloseChildFrom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncloseChildFrom.Image = global::LHMS_Application.Properties.Resources.close__1_;
+            this.btncloseChildFrom.Location = new System.Drawing.Point(7, 3);
+            this.btncloseChildFrom.Name = "btncloseChildFrom";
+            this.btncloseChildFrom.Size = new System.Drawing.Size(75, 71);
+            this.btncloseChildFrom.TabIndex = 1;
+            this.btncloseChildFrom.UseVisualStyleBackColor = true;
+            this.btncloseChildFrom.Click += new System.EventHandler(this.btncloseChildFrom_Click);
+            // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -161,43 +182,39 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btncloseChildFrom
+            // lbltitle
             // 
-            this.btncloseChildFrom.FlatAppearance.BorderSize = 0;
-            this.btncloseChildFrom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncloseChildFrom.Image = global::LHMS_Application.Properties.Resources.close__1_;
-            this.btncloseChildFrom.Location = new System.Drawing.Point(7, 3);
-            this.btncloseChildFrom.Name = "btncloseChildFrom";
-            this.btncloseChildFrom.Size = new System.Drawing.Size(75, 71);
-            this.btncloseChildFrom.TabIndex = 1;
-            this.btncloseChildFrom.UseVisualStyleBackColor = true;
-            this.btncloseChildFrom.Click += new System.EventHandler(this.btncloseChildFrom_Click);
+            this.lbltitle.AutoSize = true;
+            this.lbltitle.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltitle.ForeColor = System.Drawing.Color.White;
+            this.lbltitle.Location = new System.Drawing.Point(339, 15);
+            this.lbltitle.Name = "lbltitle";
+            this.lbltitle.Size = new System.Drawing.Size(166, 34);
+            this.lbltitle.TabIndex = 0;
+            this.lbltitle.Text = "Dashboard";
             // 
-            // btnInventory
+            // pnldashboard
             // 
-            this.btnInventory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInventory.FlatAppearance.BorderSize = 0;
-            this.btnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInventory.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInventory.ForeColor = System.Drawing.Color.White;
-            this.btnInventory.Location = new System.Drawing.Point(0, 141);
-            this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Size = new System.Drawing.Size(220, 61);
-            this.btnInventory.TabIndex = 2;
-            this.btnInventory.Text = "Inventory Qty deatils";
-            this.btnInventory.UseVisualStyleBackColor = true;
-            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
+            this.pnldashboard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnldashboard.Location = new System.Drawing.Point(220, 80);
+            this.pnldashboard.Name = "pnldashboard";
+            this.pnldashboard.Size = new System.Drawing.Size(921, 599);
+            this.pnldashboard.TabIndex = 2;
             // 
-            // label1
+            // btnLogout
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(54, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "LockHood (Pvt) Ltd.";
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Location = new System.Drawing.Point(0, 618);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(220, 61);
+            this.btnLogout.TabIndex = 3;
+            this.btnLogout.Text = "LogOut";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // frmSupervsorDashboard
             // 
@@ -232,5 +249,6 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnInventory;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnLogout;
     }
 }
