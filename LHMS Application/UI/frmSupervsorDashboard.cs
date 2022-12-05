@@ -162,5 +162,12 @@ namespace LHMS_Application.UI
             SendMessage(this.Handle, 0x112, 0xf012, 0);
 
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            FrmLogin log = new FrmLogin();
+            log.Show();
+            this.Hide();
+        }
     }
 }

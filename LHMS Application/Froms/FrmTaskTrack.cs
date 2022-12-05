@@ -28,6 +28,11 @@ namespace LHMS_Application.Froms
 
         public void clear()
         {
+            txtId.Text = "";
+            txtTaskid.Text = "";
+            txtnumberofstages.Text = "";
+            txtcompletesatges.Text = "";
+            txtpendingsatges.Text = "";
         }
 
         private void FrmTaskTrack_Load(object sender, EventArgs e)

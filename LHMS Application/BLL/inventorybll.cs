@@ -12,6 +12,7 @@ namespace LHMS_Application.BLL
         public int category_id { get; set; }
         public int product_id { get; set; }
         public int total_qty { get; set; }
+        public int assign_qty { get; set; }
         public int leftover_qty { get; set; }
         public DateTime Added_date { get; set; }
         public int added_by { get; set; }
