@@ -1,6 +1,7 @@
 ﻿using LHMS_Application.BLL;
 using LHMS_Application.Dal;
 using LHMS_Application.Forms;
+using LHMS_Application.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,9 +26,9 @@ namespace LHMS_Application.Froms
         private void FrmPurchase_Load(object sender, EventArgs e)
         {
             //get the transaction type from the main dashboard
-            string type = FrmSalesnMarketing.transactiontype;
-            //set the value on the lbltitle
-            lbltop.Text= type;
+            //string type = frmDashboardAD.transactiontype;
+            //set the value on the lbltitle;
+            //lbltop.Text = type;
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)

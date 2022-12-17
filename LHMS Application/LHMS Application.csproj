@@ -85,6 +85,12 @@
     <Compile Include="Froms\FrmFHUserS.Designer.cs">
       <DependentUpon>FrmFHUserS.cs</DependentUpon>
     </Compile>
+    <Compile Include="Froms\FrmInventoryTrackAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\FrmInventoryTrackAD.Designer.cs">
+      <DependentUpon>FrmInventoryTrackAD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Froms\FrmProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,12 +103,6 @@
     <Compile Include="Froms\FrmPurchaseandsales.Designer.cs">
       <DependentUpon>FrmPurchaseandsales.cs</DependentUpon>
     </Compile>
-    <Compile Include="Froms\FrmSalesnMarketing.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Froms\FrmSalesnMarketing.Designer.cs">
-      <DependentUpon>FrmSalesnMarketing.cs</DependentUpon>
-    </Compile>
     <Compile Include="Froms\FrmTasks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +114,12 @@
     </Compile>
     <Compile Include="Froms\FrmTaskTrack.Designer.cs">
       <DependentUpon>FrmTaskTrack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Froms\FrmTaskTrackAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\FrmTaskTrackAD.Designer.cs">
+      <DependentUpon>FrmTaskTrackAD.cs</DependentUpon>
     </Compile>
     <Compile Include="Froms\FrmUsers.cs">
       <SubType>Form</SubType>
@@ -187,14 +193,14 @@
     <EmbeddedResource Include="Froms\FrmFHUserS.resx">
       <DependentUpon>FrmFHUserS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Froms\FrmInventoryTrackAD.resx">
+      <DependentUpon>FrmInventoryTrackAD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Froms\FrmProduct.resx">
       <DependentUpon>FrmProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Froms\FrmPurchaseandsales.resx">
       <DependentUpon>FrmPurchaseandsales.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Froms\FrmSalesnMarketing.resx">
-      <DependentUpon>FrmSalesnMarketing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Froms\FrmSetting.resx">
       <DependentUpon>FrmSetting.cs</DependentUpon>
@@ -204,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Froms\FrmTaskTrack.resx">
       <DependentUpon>FrmTaskTrack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\FrmTaskTrackAD.resx">
+      <DependentUpon>FrmTaskTrackAD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Froms\FrmUsers.resx">
       <DependentUpon>FrmUsers.cs</DependentUpon>
@@ -296,6 +305,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\percent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

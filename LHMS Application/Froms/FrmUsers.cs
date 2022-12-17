@@ -201,6 +201,11 @@ namespace LHMS_Application.Forms
                 dgvUsers.DataSource = dt;
             }
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string keywords = txtSearch.Text;
+        }
     }
 
 }

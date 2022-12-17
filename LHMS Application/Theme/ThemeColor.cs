@@ -14,11 +14,11 @@ namespace LHMS_Application.Theme
         public static Color SecondaryColor { get; set; }
 
         public static List<string> ColorList = new List<string>() { "#3F51B5",
-                                                                    "#009688",
-                                                                    "#FF5722",
-                                                                    "#607D8B",
-                                                                    "#FF9800",
-                                                                    "#9C27B0" 
+                                                                    "#009688"
+                                                                    //"#FF5722",
+                                                                    //"#607D8B",
+                                                                    //"#FF9800",
+                                                                    //"#9C27B0" 
                                                                     //"#2196F3"
                                                                     //"#EA676C",
                                                                     //"#E41A4A",

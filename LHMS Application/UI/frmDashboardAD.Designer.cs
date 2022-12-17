@@ -29,11 +29,20 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnSetting = new System.Windows.Forms.Button();
-            this.btnSales = new System.Windows.Forms.Button();
-            this.btntask = new System.Windows.Forms.Button();
-            this.btncategory = new System.Windows.Forms.Button();
+            this.btnlogout = new System.Windows.Forms.Button();
+            this.pnlSalesandmar = new System.Windows.Forms.Panel();
+            this.btnpurs = new System.Windows.Forms.Button();
+            this.btmSales = new System.Windows.Forms.Button();
+            this.btnsales = new System.Windows.Forms.Button();
+            this.pnlsubtaskmanue = new System.Windows.Forms.Panel();
+            this.btntracktask = new System.Windows.Forms.Button();
+            this.btncreatetask = new System.Windows.Forms.Button();
+            this.btntaskdeatils = new System.Windows.Forms.Button();
+            this.pnlsubinvmanue = new System.Windows.Forms.Panel();
+            this.btninvqty = new System.Windows.Forms.Button();
             this.btnProduct = new System.Windows.Forms.Button();
+            this.btncategory = new System.Windows.Forms.Button();
+            this.btnInve = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,6 +55,9 @@
             this.panelDesktopPanal = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
+            this.pnlSalesandmar.SuspendLayout();
+            this.pnlsubtaskmanue.SuspendLayout();
+            this.pnlsubinvmanue.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             this.panelDesktopPanal.SuspendLayout();
@@ -55,94 +67,199 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panelMenu.Controls.Add(this.btnSetting);
-            this.panelMenu.Controls.Add(this.btnSales);
-            this.panelMenu.Controls.Add(this.btntask);
-            this.panelMenu.Controls.Add(this.btncategory);
-            this.panelMenu.Controls.Add(this.btnProduct);
+            this.panelMenu.Controls.Add(this.btnlogout);
+            this.panelMenu.Controls.Add(this.pnlSalesandmar);
+            this.panelMenu.Controls.Add(this.btnsales);
+            this.panelMenu.Controls.Add(this.pnlsubtaskmanue);
+            this.panelMenu.Controls.Add(this.btntaskdeatils);
+            this.panelMenu.Controls.Add(this.pnlsubinvmanue);
+            this.panelMenu.Controls.Add(this.btnInve);
             this.panelMenu.Controls.Add(this.btnUser);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 683);
+            this.panelMenu.Size = new System.Drawing.Size(220, 819);
             this.panelMenu.TabIndex = 0;
             // 
-            // btnSetting
+            // btnlogout
             // 
-            this.btnSetting.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnSetting.FlatAppearance.BorderSize = 0;
-            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetting.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetting.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnSetting.Image = global::LHMS_Application.Properties.Resources.setting;
-            this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.Location = new System.Drawing.Point(0, 623);
-            this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(220, 60);
-            this.btnSetting.TabIndex = 6;
-            this.btnSetting.Text = " - - Settings";
-            this.btnSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSetting.UseVisualStyleBackColor = true;
-            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
+            this.btnlogout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnlogout.FlatAppearance.BorderSize = 0;
+            this.btnlogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlogout.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlogout.ForeColor = System.Drawing.Color.White;
+            this.btnlogout.Image = global::LHMS_Application.Properties.Resources.setting;
+            this.btnlogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnlogout.Location = new System.Drawing.Point(0, 770);
+            this.btnlogout.Name = "btnlogout";
+            this.btnlogout.Size = new System.Drawing.Size(220, 49);
+            this.btnlogout.TabIndex = 16;
+            this.btnlogout.Text = "Logout";
+            this.btnlogout.UseVisualStyleBackColor = true;
+            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
             // 
-            // btnSales
+            // pnlSalesandmar
             // 
-            this.btnSales.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSales.FlatAppearance.BorderSize = 0;
-            this.btnSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSales.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSales.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnSales.Image = global::LHMS_Application.Properties.Resources.label;
-            this.btnSales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSales.Location = new System.Drawing.Point(0, 320);
-            this.btnSales.Name = "btnSales";
-            this.btnSales.Size = new System.Drawing.Size(220, 60);
-            this.btnSales.TabIndex = 5;
-            this.btnSales.Text = " - - Sales and Marketing";
-            this.btnSales.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSales.UseVisualStyleBackColor = true;
-            this.btnSales.Click += new System.EventHandler(this.btnSales_Click);
+            this.pnlSalesandmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.pnlSalesandmar.Controls.Add(this.btnpurs);
+            this.pnlSalesandmar.Controls.Add(this.btmSales);
+            this.pnlSalesandmar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSalesandmar.Location = new System.Drawing.Point(0, 590);
+            this.pnlSalesandmar.Name = "pnlSalesandmar";
+            this.pnlSalesandmar.Size = new System.Drawing.Size(220, 107);
+            this.pnlSalesandmar.TabIndex = 15;
             // 
-            // btntask
+            // btnpurs
             // 
-            this.btntask.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btntask.FlatAppearance.BorderSize = 0;
-            this.btntask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btntask.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btntask.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btntask.Image = global::LHMS_Application.Properties.Resources.task;
-            this.btntask.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btntask.Location = new System.Drawing.Point(0, 260);
-            this.btntask.Name = "btntask";
-            this.btntask.Size = new System.Drawing.Size(220, 60);
-            this.btntask.TabIndex = 4;
-            this.btntask.Text = " - - Task Deatils";
-            this.btntask.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btntask.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btntask.UseVisualStyleBackColor = true;
-            this.btntask.Click += new System.EventHandler(this.btntask_Click);
+            this.btnpurs.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnpurs.FlatAppearance.BorderSize = 0;
+            this.btnpurs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnpurs.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnpurs.ForeColor = System.Drawing.Color.White;
+            this.btnpurs.Image = global::LHMS_Application.Properties.Resources.label;
+            this.btnpurs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnpurs.Location = new System.Drawing.Point(0, 55);
+            this.btnpurs.Name = "btnpurs";
+            this.btnpurs.Size = new System.Drawing.Size(220, 55);
+            this.btnpurs.TabIndex = 17;
+            this.btnpurs.Text = "- - Purchase";
+            this.btnpurs.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnpurs.UseVisualStyleBackColor = true;
+            this.btnpurs.Click += new System.EventHandler(this.btnpurs_Click);
             // 
-            // btncategory
+            // btmSales
             // 
-            this.btncategory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btncategory.FlatAppearance.BorderSize = 0;
-            this.btncategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncategory.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncategory.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btncategory.Image = global::LHMS_Application.Properties.Resources.edit;
-            this.btncategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncategory.Location = new System.Drawing.Point(0, 200);
-            this.btncategory.Name = "btncategory";
-            this.btncategory.Size = new System.Drawing.Size(220, 60);
-            this.btncategory.TabIndex = 3;
-            this.btncategory.Text = " - - Category Inv.";
-            this.btncategory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btncategory.UseVisualStyleBackColor = true;
-            this.btncategory.Click += new System.EventHandler(this.btncategory_Click);
+            this.btmSales.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btmSales.FlatAppearance.BorderSize = 0;
+            this.btmSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btmSales.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btmSales.ForeColor = System.Drawing.Color.White;
+            this.btmSales.Image = global::LHMS_Application.Properties.Resources.label;
+            this.btmSales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btmSales.Location = new System.Drawing.Point(0, 0);
+            this.btmSales.Name = "btmSales";
+            this.btmSales.Size = new System.Drawing.Size(220, 55);
+            this.btmSales.TabIndex = 16;
+            this.btmSales.Text = "- - Sales";
+            this.btmSales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btmSales.UseVisualStyleBackColor = true;
+            this.btmSales.Click += new System.EventHandler(this.btmSales_Click);
+            // 
+            // btnsales
+            // 
+            this.btnsales.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnsales.FlatAppearance.BorderSize = 0;
+            this.btnsales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsales.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsales.ForeColor = System.Drawing.Color.White;
+            this.btnsales.Image = global::LHMS_Application.Properties.Resources.label;
+            this.btnsales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnsales.Location = new System.Drawing.Point(0, 535);
+            this.btnsales.Name = "btnsales";
+            this.btnsales.Size = new System.Drawing.Size(220, 55);
+            this.btnsales.TabIndex = 14;
+            this.btnsales.Text = "- - Sales and Marketing";
+            this.btnsales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnsales.UseVisualStyleBackColor = true;
+            this.btnsales.Click += new System.EventHandler(this.btnsales_Click);
+            // 
+            // pnlsubtaskmanue
+            // 
+            this.pnlsubtaskmanue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.pnlsubtaskmanue.Controls.Add(this.btntracktask);
+            this.pnlsubtaskmanue.Controls.Add(this.btncreatetask);
+            this.pnlsubtaskmanue.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlsubtaskmanue.Location = new System.Drawing.Point(0, 415);
+            this.pnlsubtaskmanue.Name = "pnlsubtaskmanue";
+            this.pnlsubtaskmanue.Size = new System.Drawing.Size(220, 120);
+            this.pnlsubtaskmanue.TabIndex = 13;
+            // 
+            // btntracktask
+            // 
+            this.btntracktask.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btntracktask.FlatAppearance.BorderSize = 0;
+            this.btntracktask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btntracktask.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntracktask.ForeColor = System.Drawing.Color.White;
+            this.btntracktask.Image = global::LHMS_Application.Properties.Resources.task;
+            this.btntracktask.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btntracktask.Location = new System.Drawing.Point(0, 55);
+            this.btntracktask.Name = "btntracktask";
+            this.btntracktask.Size = new System.Drawing.Size(220, 55);
+            this.btntracktask.TabIndex = 1;
+            this.btntracktask.Text = "- - Update&Track Task";
+            this.btntracktask.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btntracktask.UseVisualStyleBackColor = true;
+            this.btntracktask.Click += new System.EventHandler(this.btntracktask_Click);
+            // 
+            // btncreatetask
+            // 
+            this.btncreatetask.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btncreatetask.FlatAppearance.BorderSize = 0;
+            this.btncreatetask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncreatetask.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncreatetask.ForeColor = System.Drawing.Color.White;
+            this.btncreatetask.Image = global::LHMS_Application.Properties.Resources.task;
+            this.btncreatetask.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btncreatetask.Location = new System.Drawing.Point(0, 0);
+            this.btncreatetask.Name = "btncreatetask";
+            this.btncreatetask.Size = new System.Drawing.Size(220, 55);
+            this.btncreatetask.TabIndex = 0;
+            this.btncreatetask.Text = "- - Create Task";
+            this.btncreatetask.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btncreatetask.UseVisualStyleBackColor = true;
+            this.btncreatetask.Click += new System.EventHandler(this.btncreatetask_Click);
+            // 
+            // btntaskdeatils
+            // 
+            this.btntaskdeatils.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btntaskdeatils.FlatAppearance.BorderSize = 0;
+            this.btntaskdeatils.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btntaskdeatils.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntaskdeatils.ForeColor = System.Drawing.Color.White;
+            this.btntaskdeatils.Image = global::LHMS_Application.Properties.Resources.task;
+            this.btntaskdeatils.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btntaskdeatils.Location = new System.Drawing.Point(0, 360);
+            this.btntaskdeatils.Name = "btntaskdeatils";
+            this.btntaskdeatils.Size = new System.Drawing.Size(220, 55);
+            this.btntaskdeatils.TabIndex = 12;
+            this.btntaskdeatils.Text = " - -task Deatils";
+            this.btntaskdeatils.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btntaskdeatils.UseVisualStyleBackColor = true;
+            this.btntaskdeatils.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pnlsubinvmanue
+            // 
+            this.pnlsubinvmanue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.pnlsubinvmanue.Controls.Add(this.btninvqty);
+            this.pnlsubinvmanue.Controls.Add(this.btnProduct);
+            this.pnlsubinvmanue.Controls.Add(this.btncategory);
+            this.pnlsubinvmanue.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlsubinvmanue.Location = new System.Drawing.Point(0, 190);
+            this.pnlsubinvmanue.Name = "pnlsubinvmanue";
+            this.pnlsubinvmanue.Size = new System.Drawing.Size(220, 170);
+            this.pnlsubinvmanue.TabIndex = 10;
+            // 
+            // btninvqty
+            // 
+            this.btninvqty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btninvqty.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btninvqty.FlatAppearance.BorderSize = 0;
+            this.btninvqty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btninvqty.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btninvqty.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btninvqty.Image = global::LHMS_Application.Properties.Resources.edit;
+            this.btninvqty.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btninvqty.Location = new System.Drawing.Point(0, 110);
+            this.btninvqty.Name = "btninvqty";
+            this.btninvqty.Size = new System.Drawing.Size(220, 55);
+            this.btninvqty.TabIndex = 10;
+            this.btninvqty.Text = " - - Inventry Qty .";
+            this.btninvqty.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btninvqty.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btninvqty.UseVisualStyleBackColor = false;
+            this.btninvqty.Click += new System.EventHandler(this.btninvqty_Click);
             // 
             // btnProduct
             // 
@@ -153,15 +270,53 @@
             this.btnProduct.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnProduct.Image = global::LHMS_Application.Properties.Resources.cart;
             this.btnProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProduct.Location = new System.Drawing.Point(0, 140);
+            this.btnProduct.Location = new System.Drawing.Point(0, 55);
             this.btnProduct.Name = "btnProduct";
-            this.btnProduct.Size = new System.Drawing.Size(220, 60);
+            this.btnProduct.Size = new System.Drawing.Size(220, 55);
             this.btnProduct.TabIndex = 2;
             this.btnProduct.Text = " - - Product Inv.";
             this.btnProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnProduct.UseVisualStyleBackColor = true;
             this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
+            // 
+            // btncategory
+            // 
+            this.btncategory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btncategory.FlatAppearance.BorderSize = 0;
+            this.btncategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncategory.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncategory.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btncategory.Image = global::LHMS_Application.Properties.Resources.edit;
+            this.btncategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btncategory.Location = new System.Drawing.Point(0, 0);
+            this.btncategory.Name = "btncategory";
+            this.btncategory.Size = new System.Drawing.Size(220, 55);
+            this.btncategory.TabIndex = 3;
+            this.btncategory.Text = " - - Category Inv.";
+            this.btncategory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btncategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btncategory.UseVisualStyleBackColor = true;
+            this.btncategory.Click += new System.EventHandler(this.btncategory_Click);
+            // 
+            // btnInve
+            // 
+            this.btnInve.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInve.FlatAppearance.BorderSize = 0;
+            this.btnInve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInve.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInve.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnInve.Image = global::LHMS_Application.Properties.Resources.inventory;
+            this.btnInve.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInve.Location = new System.Drawing.Point(0, 135);
+            this.btnInve.Name = "btnInve";
+            this.btnInve.Size = new System.Drawing.Size(220, 55);
+            this.btnInve.TabIndex = 9;
+            this.btnInve.Text = " - - Inventory Deatils.";
+            this.btnInve.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInve.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInve.UseVisualStyleBackColor = true;
+            this.btnInve.Click += new System.EventHandler(this.btnInve_Click);
             // 
             // btnUser
             // 
@@ -174,7 +329,7 @@
             this.btnUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUser.Location = new System.Drawing.Point(0, 80);
             this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(220, 60);
+            this.btnUser.Size = new System.Drawing.Size(220, 55);
             this.btnUser.TabIndex = 1;
             this.btnUser.Text = " - - User Profile";
             this.btnUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -214,7 +369,7 @@
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(862, 80);
+            this.panelTitleBar.Size = new System.Drawing.Size(1028, 80);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
@@ -225,7 +380,7 @@
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimize.ForeColor = System.Drawing.Color.White;
-            this.btnMinimize.Location = new System.Drawing.Point(760, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(926, 0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(30, 30);
             this.btnMinimize.TabIndex = 4;
@@ -240,7 +395,7 @@
             this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximize.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaximize.ForeColor = System.Drawing.Color.White;
-            this.btnMaximize.Location = new System.Drawing.Point(796, 0);
+            this.btnMaximize.Location = new System.Drawing.Point(962, 0);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(30, 30);
             this.btnMaximize.TabIndex = 3;
@@ -255,7 +410,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(832, 0);
+            this.btnClose.Location = new System.Drawing.Point(998, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(30, 30);
             this.btnClose.TabIndex = 2;
@@ -283,7 +438,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(90, 24);
+            this.lblTitle.Location = new System.Drawing.Point(173, 24);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(291, 34);
             this.lblTitle.TabIndex = 0;
@@ -295,7 +450,7 @@
             this.panelDesktopPanal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktopPanal.Location = new System.Drawing.Point(220, 80);
             this.panelDesktopPanal.Name = "panelDesktopPanal";
-            this.panelDesktopPanal.Size = new System.Drawing.Size(862, 603);
+            this.panelDesktopPanal.Size = new System.Drawing.Size(1028, 739);
             this.panelDesktopPanal.TabIndex = 2;
             // 
             // pictureBox1
@@ -312,13 +467,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1082, 683);
+            this.ClientSize = new System.Drawing.Size(1248, 819);
             this.Controls.Add(this.panelDesktopPanal);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.Name = "frmDashboardAD";
             this.Text = "frmDashboardAD";
             this.panelMenu.ResumeLayout(false);
+            this.pnlSalesandmar.ResumeLayout(false);
+            this.pnlsubtaskmanue.ResumeLayout(false);
+            this.pnlsubinvmanue.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             this.panelTitleBar.ResumeLayout(false);
@@ -334,11 +492,8 @@
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Button btnUser;
         private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.Button btnSales;
-        private System.Windows.Forms.Button btntask;
         private System.Windows.Forms.Button btncategory;
         private System.Windows.Forms.Button btnProduct;
-        private System.Windows.Forms.Button btnSetting;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label label1;
@@ -348,5 +503,17 @@
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnMaximize;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnInve;
+        private System.Windows.Forms.Button btninvqty;
+        private System.Windows.Forms.Panel pnlsubinvmanue;
+        private System.Windows.Forms.Button btntaskdeatils;
+        private System.Windows.Forms.Panel pnlsubtaskmanue;
+        private System.Windows.Forms.Button btntracktask;
+        private System.Windows.Forms.Button btncreatetask;
+        private System.Windows.Forms.Button btnsales;
+        private System.Windows.Forms.Panel pnlSalesandmar;
+        private System.Windows.Forms.Button btnpurs;
+        private System.Windows.Forms.Button btmSales;
+        private System.Windows.Forms.Button btnlogout;
     }
 }

@@ -8,7 +8,7 @@ namespace LHMS_Application.BLL
 {
     internal class tracklogBll
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public int taskId { get; set; }
         public int numberofstages { get; set; }
         public string completesatges { get; set; }

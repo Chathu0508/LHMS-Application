@@ -243,7 +243,7 @@ namespace LHMS_Application.Dal
             try
             {
                 //SQL quray to get the data from the dtabase.
-                String sql = "SELECT * FROM tbl_UserD WHERE id LIKE '%" + keywords + "%' OR firstname LIKE '%" + keywords + "%' OR lastname LIKE '%" + keywords + "%' OR username LIKE '%" + keywords + "%' ";
+                String sql = "SELECT * FROM tbl_UserD WHERE id LIKE '%" + keywords + "%' OR firstname LIKE '%" + keywords + "%' OR lastname LIKE '%" + keywords + "%' OR username LIKE '%" + keywords + "%' OR department LIKE '%" + keywords + "%' ";
 
                 // for Excute the Command.
                 SqlCommand cmd = new SqlCommand(sql, conn);
