@@ -100,8 +100,6 @@ namespace LHMS_Application.UI
             childFrom.BringToFront();
             childFrom.Show();
             lbltitle.Text = childFrom.Text;
-
-
         }
         private void Reset()
         {
@@ -112,13 +110,10 @@ namespace LHMS_Application.UI
             currentButton = null;
             btncloseChildFrom.Visible = false;
         }
-
-
         private void btntask_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Froms.FrmTaskTrack(), sender);
         }
-
         private void btnInventory_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Froms.Frminvenroty_tracklog(), sender);

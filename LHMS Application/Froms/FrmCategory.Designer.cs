@@ -108,15 +108,15 @@
             this.dgvcategory.Name = "dgvcategory";
             this.dgvcategory.RowHeadersWidth = 51;
             this.dgvcategory.RowTemplate.Height = 24;
-            this.dgvcategory.Size = new System.Drawing.Size(475, 465);
+            this.dgvcategory.Size = new System.Drawing.Size(475, 387);
             this.dgvcategory.TabIndex = 6;
             this.dgvcategory.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvcategory_RowHeaderMouseClick);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(20, 589);
+            this.btnAdd.Location = new System.Drawing.Point(20, 566);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(252, 53);
+            this.btnAdd.Size = new System.Drawing.Size(273, 53);
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Add Category";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -136,7 +136,7 @@
             // 
             this.lblSearch.AutoSize = true;
             this.lblSearch.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(645, 554);
+            this.lblSearch.Location = new System.Drawing.Point(645, 474);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(167, 21);
             this.lblSearch.TabIndex = 8;
@@ -144,9 +144,9 @@
             // 
             // btnupdate
             // 
-            this.btnupdate.Location = new System.Drawing.Point(341, 589);
+            this.btnupdate.Location = new System.Drawing.Point(20, 625);
             this.btnupdate.Name = "btnupdate";
-            this.btnupdate.Size = new System.Drawing.Size(252, 53);
+            this.btnupdate.Size = new System.Drawing.Size(273, 53);
             this.btnupdate.TabIndex = 10;
             this.btnupdate.Text = "Update Category";
             this.btnupdate.UseVisualStyleBackColor = true;
@@ -154,9 +154,9 @@
             // 
             // btnDelate
             // 
-            this.btnDelate.Location = new System.Drawing.Point(669, 634);
+            this.btnDelate.Location = new System.Drawing.Point(20, 684);
             this.btnDelate.Name = "btnDelate";
-            this.btnDelate.Size = new System.Drawing.Size(455, 40);
+            this.btnDelate.Size = new System.Drawing.Size(273, 40);
             this.btnDelate.TabIndex = 11;
             this.btnDelate.Text = "Delete Category";
             this.btnDelate.UseVisualStyleBackColor = true;

@@ -57,6 +57,7 @@
             this.dgvTasks.RowTemplate.Height = 24;
             this.dgvTasks.Size = new System.Drawing.Size(444, 302);
             this.dgvTasks.TabIndex = 0;
+            this.dgvTasks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTasks_CellContentClick);
             this.dgvTasks.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvTasks_RowHeaderMouseClick);
             // 
             // dgvTasklog
@@ -70,6 +71,7 @@
             this.dgvTasklog.RowTemplate.Height = 24;
             this.dgvTasklog.Size = new System.Drawing.Size(444, 302);
             this.dgvTasklog.TabIndex = 11;
+            this.dgvTasklog.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTasklog_CellContentClick);
             this.dgvTasklog.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvTasklog_RowHeaderMouseClick);
             // 
             // lbltaskID
@@ -81,6 +83,7 @@
             this.lbltaskID.Size = new System.Drawing.Size(69, 21);
             this.lbltaskID.TabIndex = 12;
             this.lbltaskID.Text = "Task ID";
+            this.lbltaskID.Click += new System.EventHandler(this.lbltaskID_Click);
             // 
             // txtTaskid
             // 
@@ -90,6 +93,7 @@
             this.txtTaskid.Name = "txtTaskid";
             this.txtTaskid.Size = new System.Drawing.Size(383, 28);
             this.txtTaskid.TabIndex = 13;
+            this.txtTaskid.TextChanged += new System.EventHandler(this.txtTaskid_TextChanged);
             // 
             // txtId
             // 
@@ -99,6 +103,7 @@
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(383, 28);
             this.txtId.TabIndex = 15;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // lblid
             // 
@@ -109,6 +114,7 @@
             this.lblid.Size = new System.Drawing.Size(78, 21);
             this.lblid.TabIndex = 14;
             this.lblid.Text = "Track ID";
+            this.lblid.Click += new System.EventHandler(this.lblid_Click);
             // 
             // txtnumberofstages
             // 
@@ -118,6 +124,7 @@
             this.txtnumberofstages.Name = "txtnumberofstages";
             this.txtnumberofstages.Size = new System.Drawing.Size(383, 28);
             this.txtnumberofstages.TabIndex = 17;
+            this.txtnumberofstages.TextChanged += new System.EventHandler(this.txtnumberofstages_TextChanged);
             // 
             // lblnumberofstages
             // 
@@ -128,6 +135,7 @@
             this.lblnumberofstages.Size = new System.Drawing.Size(158, 21);
             this.lblnumberofstages.TabIndex = 16;
             this.lblnumberofstages.Text = "Number of Stages";
+            this.lblnumberofstages.Click += new System.EventHandler(this.lblnumberofstages_Click);
             // 
             // txtpendingsatges
             // 
@@ -137,6 +145,7 @@
             this.txtpendingsatges.Name = "txtpendingsatges";
             this.txtpendingsatges.Size = new System.Drawing.Size(383, 28);
             this.txtpendingsatges.TabIndex = 19;
+            this.txtpendingsatges.TextChanged += new System.EventHandler(this.txtpendingsatges_TextChanged);
             // 
             // lblpendingsatges
             // 
@@ -147,6 +156,7 @@
             this.lblpendingsatges.Size = new System.Drawing.Size(138, 21);
             this.lblpendingsatges.TabIndex = 18;
             this.lblpendingsatges.Text = "Pending Satges";
+            this.lblpendingsatges.Click += new System.EventHandler(this.lblpendingsatges_Click);
             // 
             // txtcompletesatges
             // 
@@ -156,6 +166,7 @@
             this.txtcompletesatges.Name = "txtcompletesatges";
             this.txtcompletesatges.Size = new System.Drawing.Size(383, 28);
             this.txtcompletesatges.TabIndex = 21;
+            this.txtcompletesatges.TextChanged += new System.EventHandler(this.txtcompletesatges_TextChanged);
             // 
             // lblcompletesatges
             // 
@@ -166,6 +177,7 @@
             this.lblcompletesatges.Size = new System.Drawing.Size(155, 21);
             this.lblcompletesatges.TabIndex = 20;
             this.lblcompletesatges.Text = "Complete Satges";
+            this.lblcompletesatges.Click += new System.EventHandler(this.lblcompletesatges_Click);
             // 
             // btnadd
             // 

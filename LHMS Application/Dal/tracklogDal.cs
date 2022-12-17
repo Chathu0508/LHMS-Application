@@ -47,7 +47,7 @@ namespace LHMS_Application.Dal
             finally
             {
                 //close the connection between the database and the Application
-                conn.Close();   
+                conn.Close();
             }
             return dt;
         }
@@ -60,20 +60,17 @@ namespace LHMS_Application.Dal
             SqlConnection conn = new SqlConnection(myconnstrng);
             try
             {
-                string sql = "INSERT INTO task_log(taskid, numberofstages, completesatges, pendingsatges, added_date, add_by)VALUES(@taskid, @numberofstages, @completesatges, @pendingsatges, @added_date, @add_by)";
+                string sql = "INSERT INTO task_log(taskId, numberofstages, completesatges, pendingsatges, added_date, add_by)VALUES(@taskId, @numberofstages, @completesatges, @pendingsatges, @added_date, @add_by)";
                 SqlCommand cmd = new SqlCommand(sql, conn);
-
-                cmd.Parameters.AddWithValue("@taskid", tl.taskId);
+                cmd.Parameters.AddWithValue("@taskId", tl.taskId);
                 cmd.Parameters.AddWithValue("@numberofstages", tl.numberofstages);
                 cmd.Parameters.AddWithValue("@completesatges", tl.completesatges);
                 cmd.Parameters.AddWithValue("@pendingsatges", tl.pendingsatges);
                 cmd.Parameters.AddWithValue("@added_date", tl.added_date);
                 cmd.Parameters.AddWithValue("@add_by", tl.add_by);
-
+                cmd.Parameters.AddWithValue("@Id", tl.Id);
                 conn.Open();
-
                 int rows = cmd.ExecuteNonQuery();
-
                 if (rows > 0)
                 {
                     isSuucess = true;
@@ -83,7 +80,7 @@ namespace LHMS_Application.Dal
                     isSuucess = false;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -94,5 +91,83 @@ namespace LHMS_Application.Dal
             return isSuucess;
         }
         #endregion
+        #region Update Method
+        public bool Update(tracklogBll tl)
+        {
+            bool isSuccess = false;
+            SqlConnection conn = new SqlConnection(myconnstrng);
+            try
+            {
+                string sql = "UPDATE task_log SET taskId=@taskId, numberofstages=@numberofstages, completesatges=@completesatges, pendingsatges=@pendingsatges, added_date=@added_date, add_by=@add_by WHERE Id=@Id";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+
+                cmd.Parameters.AddWithValue("@taskId", tl.taskId);
+                cmd.Parameters.AddWithValue("@numberofstages", tl.numberofstages);
+                cmd.Parameters.AddWithValue("@completesatges", tl.completesatges);
+                cmd.Parameters.AddWithValue("@pendingsatges", tl.pendingsatges);
+                cmd.Parameters.AddWithValue("@added_date", tl.added_date);
+                cmd.Parameters.AddWithValue("@add_by", tl.add_by);
+                cmd.Parameters.AddWithValue("@ID", tl.Id);
+                conn.Open();
+
+                Console.WriteLine();
+                int rows = cmd.ExecuteNonQuery();
+                if (rows > 0)
+                {
+                    isSuccess = true;
+                }
+                else
+                {
+                    isSuccess = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return isSuccess;
+        }
+        #endregion
+        #region
+        public bool Delete(tracklogBll tl)
+        {
+            bool isSuccess = false;
+            SqlConnection conn = new SqlConnection(myconnstrng);
+            try
+            {
+                string sql = "DELETE FROM task_log WHERE Id=@Id";
+
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@Id", tl.Id);
+
+                conn.Open();
+
+                int rows = cmd.ExecuteNonQuery();
+
+                if (rows > 0)
+                {
+                    isSuccess = true;
+                }
+                else
+                {
+                    isSuccess = false;
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return isSuccess;
+
+            #endregion
+        }
     }
-}
+   }

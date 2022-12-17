@@ -18,6 +18,7 @@ namespace LHMS_Application.Froms
         public FrmTaskTrack()
         {
             InitializeComponent();
+
         }
 
         taskBLL t = new taskBLL();
@@ -90,6 +91,66 @@ namespace LHMS_Application.Froms
             {
                 MessageBox.Show("Fail to Update the Daily Tasks.");
             }
+
+        }
+
+        private void txtcompletesatges_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblcompletesatges_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtpendingsatges_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblpendingsatges_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtnumberofstages_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblnumberofstages_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblid_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTaskid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbltaskID_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvTasklog_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvTasks_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
