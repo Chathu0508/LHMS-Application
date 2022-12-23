@@ -54,6 +54,9 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelDesktopPanal = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pnlswreports = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.pnlSalesandmar.SuspendLayout();
             this.pnlsubtaskmanue.SuspendLayout();
@@ -62,11 +65,14 @@
             this.panelTitleBar.SuspendLayout();
             this.panelDesktopPanal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlswreports.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelMenu.Controls.Add(this.pnlswreports);
+            this.panelMenu.Controls.Add(this.button1);
             this.panelMenu.Controls.Add(this.btnlogout);
             this.panelMenu.Controls.Add(this.pnlSalesandmar);
             this.panelMenu.Controls.Add(this.btnsales);
@@ -79,7 +85,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 819);
+            this.panelMenu.Size = new System.Drawing.Size(220, 954);
             this.panelMenu.TabIndex = 0;
             // 
             // btnlogout
@@ -91,7 +97,7 @@
             this.btnlogout.ForeColor = System.Drawing.Color.White;
             this.btnlogout.Image = global::LHMS_Application.Properties.Resources.setting;
             this.btnlogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnlogout.Location = new System.Drawing.Point(0, 770);
+            this.btnlogout.Location = new System.Drawing.Point(0, 905);
             this.btnlogout.Name = "btnlogout";
             this.btnlogout.Size = new System.Drawing.Size(220, 49);
             this.btnlogout.TabIndex = 16;
@@ -450,7 +456,7 @@
             this.panelDesktopPanal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktopPanal.Location = new System.Drawing.Point(220, 80);
             this.panelDesktopPanal.Name = "panelDesktopPanal";
-            this.panelDesktopPanal.Size = new System.Drawing.Size(1028, 739);
+            this.panelDesktopPanal.Size = new System.Drawing.Size(1028, 874);
             this.panelDesktopPanal.TabIndex = 2;
             // 
             // pictureBox1
@@ -463,16 +469,61 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::LHMS_Application.Properties.Resources.task;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 697);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(220, 55);
+            this.button1.TabIndex = 17;
+            this.button1.Text = " - - Reports";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // pnlswreports
+            // 
+            this.pnlswreports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.pnlswreports.Controls.Add(this.button2);
+            this.pnlswreports.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlswreports.Location = new System.Drawing.Point(0, 752);
+            this.pnlswreports.Name = "pnlswreports";
+            this.pnlswreports.Size = new System.Drawing.Size(220, 111);
+            this.pnlswreports.TabIndex = 18;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(220, 55);
+            this.button2.TabIndex = 0;
+            this.button2.Text = " - - login report";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // frmDashboardAD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1248, 819);
+            this.ClientSize = new System.Drawing.Size(1248, 954);
             this.Controls.Add(this.panelDesktopPanal);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.Name = "frmDashboardAD";
             this.Text = "frmDashboardAD";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDashboardAD_FormClosed);
             this.panelMenu.ResumeLayout(false);
             this.pnlSalesandmar.ResumeLayout(false);
             this.pnlsubtaskmanue.ResumeLayout(false);
@@ -483,6 +534,7 @@
             this.panelTitleBar.PerformLayout();
             this.panelDesktopPanal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlswreports.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -515,5 +567,8 @@
         private System.Windows.Forms.Button btnpurs;
         private System.Windows.Forms.Button btmSales;
         private System.Windows.Forms.Button btnlogout;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel pnlswreports;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -52,7 +52,7 @@ namespace LHMS_Application.Froms
         {
             string keyword = txtSearch.Text;
             //write the code to get the details and values on text 
-            dealcusBll dc = dcdal.SearchDealerCustomerFortransaction(keyword);
+            DealCusBll dc = dcdal.SearchDealerCustomerFortransaction(keyword);
 
             //now transfer or set the value from deacustbll to textbox
             txtName.Text = dc.name;

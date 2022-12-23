@@ -22,9 +22,9 @@ namespace LHMS_Application.Froms
             InitializeComponent();
             LoadTheme();
         }
-        taskBLL t = new taskBLL();
+        TaskBLL t = new TaskBLL();
         TaskDal dal = new TaskDal();
-        tracklogBll tb = new tracklogBll();
+        TracklogBll tb = new TracklogBll();
         tracklogDal tdal = new tracklogDal();
         userDal udal = new userDal();
         public void clear()
@@ -131,6 +131,7 @@ namespace LHMS_Application.Froms
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+
         }
     }
 }

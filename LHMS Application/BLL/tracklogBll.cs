@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LHMS_Application.BLL
 {
-    internal class tracklogBll
+    internal class TracklogBll
     {
         public int Id { get; set; }
         public int taskId { get; set; }

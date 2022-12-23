@@ -114,5 +114,50 @@ namespace LHMS_Application.UI
         {
             OpenChildForm(new Forms.FrmTasks(), sender);
         }
+
+        private void btntaskp_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Froms.Frmtaskprograss(), sender);
+        }
+        private void btnlog_Click(object sender, EventArgs e)
+        {
+            FrmLogin log = new FrmLogin();
+            log.Show();
+            this.Hide();
+        }
+
+
+        private void btncloseChildFrom_Click(object sender, EventArgs e)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            Reset();
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+
     }
 }

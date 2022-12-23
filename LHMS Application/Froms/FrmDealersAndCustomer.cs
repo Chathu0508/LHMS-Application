@@ -20,7 +20,7 @@ namespace LHMS_Application.Froms
         {
             InitializeComponent();
         }
-        dealcusBll dc = new dealcusBll();
+        DealCusBll dc = new DealCusBll();
         dealcusDal dal = new dealcusDal();
 
         userDal udal = new userDal();

@@ -112,11 +112,7 @@
             "Factory Head",
             "Department Head",
             "Department Employees",
-            "Supervisor",
-            "Workshop Head",
-            "Workshop Employees",
-            "Unit Head",
-            "Unit Employees"});
+            "Supervisor"});
             this.cmbUserType.Location = new System.Drawing.Point(12, 342);
             this.cmbUserType.Name = "cmbUserType";
             this.cmbUserType.Size = new System.Drawing.Size(448, 31);
@@ -143,7 +139,7 @@
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimize.ForeColor = System.Drawing.Color.White;
-            this.btnMinimize.Location = new System.Drawing.Point(1165, 1);
+            this.btnMinimize.Location = new System.Drawing.Point(1183, 1);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(30, 30);
             this.btnMinimize.TabIndex = 9;
@@ -159,7 +155,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(1201, 1);
+            this.btnClose.Location = new System.Drawing.Point(1219, 1);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(30, 30);
             this.btnClose.TabIndex = 7;
@@ -188,7 +184,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1234, 675);
+            this.ClientSize = new System.Drawing.Size(1252, 722);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnMinimize);
             this.Controls.Add(this.btnClose);

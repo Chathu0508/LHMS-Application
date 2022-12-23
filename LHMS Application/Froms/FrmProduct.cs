@@ -21,7 +21,7 @@ namespace LHMS_Application.Forms
             InitializeComponent();
         }
         categoryDal cdal = new categoryDal();
-        productBll p = new productBll();
+        ProductBll p = new ProductBll();
         productDal pdal = new productDal();
         userDal udal = new userDal();
 

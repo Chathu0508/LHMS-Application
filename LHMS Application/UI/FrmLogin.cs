@@ -22,7 +22,7 @@ namespace LHMS_Application.UI
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
 
         }
-        loginBll l = new loginBll();
+        LoginBll l = new LoginBll();
         loginDal dal = new loginDal();
         public static string LoggedIn;
 

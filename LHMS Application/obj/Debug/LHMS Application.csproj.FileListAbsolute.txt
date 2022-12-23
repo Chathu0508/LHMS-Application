@@ -45,6 +45,7 @@ D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\L
 D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.Froms.FrmFHUserS.resources
 D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.UI.frmDepartmentHDashboard.resources
 D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.UI.frmSupervsorDashboard.resources
-D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.Froms.Frminvenroty_tracklog.resources
-D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.Froms.FrmInventoryTrackAD.resources
 D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.Froms.FrmTaskTrackAD.resources
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.Froms.Frmtaskprograss.resources
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.Froms.FrmtaskAD.resources
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.Froms.FrmLogTrack.resources

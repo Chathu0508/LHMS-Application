@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace LHMS_Application.BLL
 {
-    internal class taskBLL
+    internal class TaskBLL
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public string title { get; set; }
         public string description { get; set; }
         public string factory { get; set; }

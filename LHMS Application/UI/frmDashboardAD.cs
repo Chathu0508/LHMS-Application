@@ -136,6 +136,7 @@ namespace LHMS_Application.UI
             pnlsubinvmanue.Visible = false;
             pnlSalesandmar.Visible = false;
             pnlsubtaskmanue.Visible = false;
+            pnlswreports.Visible = false;
         }
 
         private void hidsubmenu()
@@ -148,6 +149,8 @@ namespace LHMS_Application.UI
 
             if (pnlSalesandmar.Visible == true)
                 pnlSalesandmar.Visible = false;
+            if(pnlswreports.Visible == true)
+                pnlswreports.Visible = false;
         }
 
         private void ShowSubmenu(Panel submenu)
@@ -193,6 +196,10 @@ namespace LHMS_Application.UI
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        private void frmDashboardAD_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
 
 
         //Inventroy Deatils button and sub button
@@ -212,7 +219,7 @@ namespace LHMS_Application.UI
         }
         private void btninvqty_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Froms.FrmInventoryTrackAD(), sender);
+            //OpenChildForm(new Froms.FrmInventoryTrackAD(), sender);
             hidsubmenu();
         }
 
@@ -224,7 +231,7 @@ namespace LHMS_Application.UI
 
         private void btncreatetask_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FrmTasks(), sender);
+            OpenChildForm(new Froms.FrmtaskAD(), sender);
             hidsubmenu();
         }
 
@@ -259,6 +266,18 @@ namespace LHMS_Application.UI
             FrmLogin log = new FrmLogin();
             log.Show();
             this.Hide();
+        }
+
+        //Sales and marketing and other
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            ShowSubmenu(pnlswreports);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Froms.FrmLogTrack(), sender);
+            hidsubmenu();
         }
     }
 }

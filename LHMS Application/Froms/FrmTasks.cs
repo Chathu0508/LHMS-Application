@@ -20,7 +20,7 @@ namespace LHMS_Application.Forms
             InitializeComponent();
         }
 
-        taskBLL t = new taskBLL();
+        TaskBLL t = new TaskBLL();
         TaskDal dal = new TaskDal();
         userDal udal = new userDal();
 
@@ -69,29 +69,6 @@ namespace LHMS_Application.Forms
             {
                 //newcategory insert was Failed
                 MessageBox.Show("New task Inserted Failed.");
-            }
-
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            //get the id that need to delete the from teh database.
-            t.id = int.Parse(txtID.Text);
-
-            //Creating boolane variable to delete the cateogory.
-            bool success = dal.Delete(t);
-
-            if (success == true)
-            {
-                MessageBox.Show("This category is removed from the system.");
-                clear();
-
-                DataTable dt = dal.Select();
-                dgvtasks.DataSource = dt;
-            }
-            else
-            {
-                MessageBox.Show("Fail to remove the category. TRY Again.");
             }
 
         }

@@ -47,18 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\categoryBll.cs" />
-    <Compile Include="BLL\dealcusBll.cs" />
-    <Compile Include="BLL\inventorybll.cs" />
-    <Compile Include="BLL\loginBll.cs" />
-    <Compile Include="BLL\productBll.cs" />
-    <Compile Include="BLL\taskBLL.cs" />
-    <Compile Include="BLL\tracklogBll.cs" />
-    <Compile Include="BLL\transactionalDetailsBll.cs" />
-    <Compile Include="Dal\inventoryDal.cs" />
+    <Compile Include="BLL\CategoryBll.cs" />
+    <Compile Include="BLL\DealCusBll.cs" />
+    <Compile Include="BLL\LoginBll.cs" />
+    <Compile Include="BLL\LogTrackBll.cs" />
+    <Compile Include="BLL\ProductBll.cs" />
+    <Compile Include="BLL\TaskBLL.cs" />
+    <Compile Include="BLL\TracklogBll.cs" />
+    <Compile Include="BLL\TransactionalDetailsBll.cs" />
+    <Compile Include="Dal\LogTrackDal.cs" />
     <Compile Include="Dal\tracklogDal.cs" />
     <Compile Include="Dal\transactionDal.cs" />
-    <Compile Include="BLL\transactionsBll.cs" />
+    <Compile Include="BLL\TransactionsBll.cs" />
     <Compile Include="BLL\UserBll.cs" />
     <Compile Include="Dal\categoryDal.cs" />
     <Compile Include="Dal\dealcusDal.cs" />
@@ -67,6 +67,7 @@
     <Compile Include="Dal\TaskDal.cs" />
     <Compile Include="Dal\transactiondetialDal.cs" />
     <Compile Include="Dal\userDal.cs" />
+    <Compile Include="Database\DbConnection.cs" />
     <Compile Include="Froms\FrmCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,11 +86,11 @@
     <Compile Include="Froms\FrmFHUserS.Designer.cs">
       <DependentUpon>FrmFHUserS.cs</DependentUpon>
     </Compile>
-    <Compile Include="Froms\FrmInventoryTrackAD.cs">
+    <Compile Include="Froms\FrmLogTrack.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Froms\FrmInventoryTrackAD.Designer.cs">
-      <DependentUpon>FrmInventoryTrackAD.cs</DependentUpon>
+    <Compile Include="Froms\FrmLogTrack.Designer.cs">
+      <DependentUpon>FrmLogTrack.cs</DependentUpon>
     </Compile>
     <Compile Include="Froms\FrmProduct.cs">
       <SubType>Form</SubType>
@@ -102,6 +103,18 @@
     </Compile>
     <Compile Include="Froms\FrmPurchaseandsales.Designer.cs">
       <DependentUpon>FrmPurchaseandsales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Froms\FrmtaskAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\FrmtaskAD.Designer.cs">
+      <DependentUpon>FrmtaskAD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Froms\Frmtaskprograss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\Frmtaskprograss.Designer.cs">
+      <DependentUpon>Frmtaskprograss.cs</DependentUpon>
     </Compile>
     <Compile Include="Froms\FrmTasks.cs">
       <SubType>Form</SubType>
@@ -132,12 +145,6 @@
     </Compile>
     <Compile Include="Froms\FrmSetting.Designer.cs">
       <DependentUpon>FrmSetting.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Froms\Frminvenroty_tracklog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Froms\Frminvenroty_tracklog.Designer.cs">
-      <DependentUpon>Frminvenroty_tracklog.cs</DependentUpon>
     </Compile>
     <Compile Include="Froms\SampleTestUI.cs">
       <SubType>Form</SubType>
@@ -184,6 +191,7 @@
     <Compile Include="UI\frmSupervsorDashboard.Designer.cs">
       <DependentUpon>frmSupervsorDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validation\Validationf.cs" />
     <EmbeddedResource Include="Froms\FrmCategory.resx">
       <DependentUpon>FrmCategory.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,8 +201,8 @@
     <EmbeddedResource Include="Froms\FrmFHUserS.resx">
       <DependentUpon>FrmFHUserS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Froms\FrmInventoryTrackAD.resx">
-      <DependentUpon>FrmInventoryTrackAD.cs</DependentUpon>
+    <EmbeddedResource Include="Froms\FrmLogTrack.resx">
+      <DependentUpon>FrmLogTrack.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Froms\FrmProduct.resx">
       <DependentUpon>FrmProduct.cs</DependentUpon>
@@ -204,6 +212,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Froms\FrmSetting.resx">
       <DependentUpon>FrmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\FrmtaskAD.resx">
+      <DependentUpon>FrmtaskAD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\Frmtaskprograss.resx">
+      <DependentUpon>Frmtaskprograss.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Froms\FrmTasks.resx">
       <DependentUpon>FrmTasks.cs</DependentUpon>
@@ -216,9 +230,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Froms\FrmUsers.resx">
       <DependentUpon>FrmUsers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Froms\Frminvenroty_tracklog.resx">
-      <DependentUpon>Frminvenroty_tracklog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Froms\SampleTestUI.resx">
       <DependentUpon>SampleTestUI.cs</DependentUpon>
@@ -315,5 +326,6 @@
   <ItemGroup>
     <None Include="Resources\search.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
