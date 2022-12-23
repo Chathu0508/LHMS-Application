@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LHMS_Application.BLL
 {
-    internal class dealcusBll
+    internal class DealCusBll
     {
         public int id { get; set; }
         public string type { get; set; }

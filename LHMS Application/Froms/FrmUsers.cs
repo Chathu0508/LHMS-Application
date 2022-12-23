@@ -2,6 +2,7 @@
 using LHMS_Application.Dal;
 using LHMS_Application.Theme;
 using LHMS_Application.UI;
+using LHMS_Application.Validation;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,10 +20,12 @@ namespace LHMS_Application.Forms
         public FrmUsers()
         {
             InitializeComponent();
-            LoadTheme();    
+            LoadTheme();
         }
         UserBll u = new UserBll();
         userDal dal = new userDal();
+        Validationf val_d = new Validationf();
+
 
         private void LoadTheme()
         {
@@ -41,51 +44,113 @@ namespace LHMS_Application.Forms
             }
         }
 
+        private bool Validation()
+        {
+            bool isEmpty = false;
+            if (String.IsNullOrWhiteSpace(txtFirstName.Text))
+            {
+                isEmpty = true;
+            }
+            if (String.IsNullOrWhiteSpace(txtLastName.Text))
+            {
+                isEmpty = true;
+            }
+            if (String.IsNullOrWhiteSpace(txtEmail.Text))
+            {
+                isEmpty = true;
+            }
+            if (String.IsNullOrWhiteSpace(txtUsername.Text))
+            {
+                isEmpty = true;
+            }
+            if (String.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                isEmpty = true;
+            }
+            if (String.IsNullOrWhiteSpace(txtContact.Text))
+            {
+                isEmpty = true;
+            }
+            if (String.IsNullOrWhiteSpace(txtAddress.Text))
+            {
+                isEmpty = true;
+            }
+            if (String.IsNullOrWhiteSpace(cmbGender.Text))
+            {
+                isEmpty = true;
+            }
+            if (String.IsNullOrWhiteSpace(cmbUserType.Text))
+            {
+                isEmpty = true;
+            }
+            if (String.IsNullOrWhiteSpace(cmbdepartment.Text))
+            {
+                isEmpty = true;
+            }
+            if (String.IsNullOrWhiteSpace(cmbFactory.Text))
+            {
+                isEmpty = true;
+            }
+            return isEmpty;
+        }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            //getting Username of the logged in User
-            string loggedUser = FrmLogin.LoggedIn;
 
-            // getting data from UI
-            u.firstname = txtFirstName.Text;
-            u.lastname = txtLastName.Text;
-            u.email = txtEmail.Text;
-            u.username = txtUsername.Text;
-            u.password = txtPassword.Text;
-            u.contact = txtContact.Text;
-            u.address = txtAddress.Text;
-            u.gender = cmbGender.Text;
-            u.user_type = cmbUserType.Text;
-            u.department=cmbdepartment.Text;
-            u.Factory = cmbFactory.Text;
-            u.added_Date = DateTime.Now;
+            bool isEmpty = Validation();
 
-            //get the username of the user
-            string loggeduser = FrmLogin.LoggedIn;
-            UserBll usr = dal.GetIDFromUsername(loggeduser);
-
-            u.added_by = usr.id;
-
-            //Insert in to Database. 
-            bool success = dal.Insert(u);
-
-            //if the data is Successfully inserted them the value of success will be true else it will  be fales. 
-            if (success)
+            if (!isEmpty)
             {
-                //Data successfully Insert 
-                MessageBox.Show("Successfully create a user");
-                clear();
+                //getting Username of the logged in User
+                string loggedUser = FrmLogin.LoggedIn;
+
+                // getting data from UI
+                u.firstname = txtFirstName.Text;
+                u.lastname = txtLastName.Text;
+                u.email = txtEmail.Text;
+                u.username = txtUsername.Text;
+                u.password = txtPassword.Text;
+                u.contact = txtContact.Text;
+                u.address = txtAddress.Text;
+                u.gender = cmbGender.Text;
+                u.user_type = cmbUserType.Text;
+                u.department = cmbdepartment.Text;
+                u.Factory = cmbFactory.Text;
+                u.added_Date = DateTime.Now;
+
+                //get the username of the user
+                string loggeduser = FrmLogin.LoggedIn;
+                UserBll usr = dal.GetIDFromUsername(loggeduser);
+
+                u.added_by = usr.id;
+
+                //Insert in to Database. 
+                bool success = dal.Insert(u);
+
+                //if the data is Successfully inserted them the value of success will be true else it will  be fales. 
+                if (success)
+                {
+                    //Data successfully Insert 
+                    MessageBox.Show("Successfully create a user");
+                    clear();
+                }
+                else
+                {
+                    //Data didnot insert Successfully.
+                    MessageBox.Show("Fail to create the user");
+                }
+                //Refreshing Data Grid View.
+                DataTable dt = dal.Select();
+                dgvUsers.DataSource = dt;
             }
+
             else
             {
-                //Data didnot insert Successfully.
-                MessageBox.Show("Fail to create the user");
+                MessageBox.Show("Please Insert");
             }
-            //Refreshing Data Grid View.
-            DataTable dt = dal.Select();
-            dgvUsers.DataSource = dt;
-
         }
+    
+
         public void clear()
         {
             txtID.Text = "";

@@ -8,64 +8,62 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
 using LHMS_Application.BLL;
+using LHMS_Application.Database;
 
 namespace LHMS_Application.Dal
 {
     internal class userDal
     {
-        //connecting the database with the application
-        static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
+        // createing the connection to the datebase.
+        DbConnection db = DbConnection.getInstance();
 
+        // the following tis the  method for the dabse to called
         #region Select the data from the database.
-            public DataTable Select()
+        public DataTable Select()
+        {
+            //to hold the data from the database.
+            DataTable dt = new DataTable();
+            try
             {
-                //static method to connect the database.
-                SqlConnection conn = new SqlConnection(myconnstrng);
-
-                //to hold the data from the database.
-                DataTable dt = new DataTable();
-                try
-                {
-                    //SQL quray to get the data from the dtabase.
-                    String sql = "SELECT * FROM tbl_UserD";
-
-                    // for Excute the Command.
-                    SqlCommand cmd = new SqlCommand(sql, conn);
-
-                    //Gatting the data from the data base.
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-
-                    //database Connection open.
-                    conn.Open();
-
-                    //Fill the data in our database.
-                    adapter.Fill(dt);
-                }
-                catch (Exception ex)
-                {
-                    //throw any eorror masessage from the sysytem.
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                { 
-                    //Close the connection for the data base.
-                    conn.Close();
-                }
-
-                //return the vale of the database.
-                return dt;
+                //database Connection open.
+                db.OpenCon();
+                //SQL quray to get the data from the dtabase.
+                String sql = "SELECT * FROM tbl_UserD";
+                // for Excute the Command.
+                SqlCommand cmd = new SqlCommand(sql, db.conn);
+                //Gatting the data from the data base.
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                //Fill the data in our database.
+                adapter.Fill(dt);
             }
+            catch (Exception ex)
+            {
+                //throw any eorror masessage from the sysytem.
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                //Close the connection for the data base.
+                db.CloseCon();
+            }
+
+            //return the vale of the database.
+            return dt;
+        }
         #endregion
         #region Insert date tothe Database.
         public bool Insert(UserBll u)
         {
             bool isSuccess = false;
 
-            SqlConnection conn = new SqlConnection(myconnstrng);
             try
             {
+                //database Connection open.
+                db.OpenCon();
+                //SQL quray to get the data from the dtabase.
                 string sql = "INSERT INTO tbl_UserD (firstname, lastname, email, username, password, contact, address, gender, user_type,department, Factory, added_Date, added_by) VALUES(@firstname, @lastname, @email, @username, @password, @contact, @address, @gender, @user_type, @department, @Factory, @added_Date, @added_by)";
-                SqlCommand cmd = new SqlCommand(sql, conn);
+                // for Excute the Command.
+                SqlCommand cmd = new SqlCommand(sql, db.conn);
 
                 cmd.Parameters.AddWithValue("@firstname", u.firstname);
                 cmd.Parameters.AddWithValue("@lastname", u.lastname);
@@ -81,7 +79,6 @@ namespace LHMS_Application.Dal
                 cmd.Parameters.AddWithValue("@added_Date", u.added_Date);
                 cmd.Parameters.AddWithValue("@added_by", u.added_by);
 
-                conn.Open();
 
                 int rows = cmd.ExecuteNonQuery();
 
@@ -103,7 +100,7 @@ namespace LHMS_Application.Dal
             }
             finally
             {
-                conn.Close();
+                db.CloseCon();
             }
 
             return isSuccess;
@@ -114,15 +111,14 @@ namespace LHMS_Application.Dal
         public UserBll GetIDFromUsername(string username)
         {
             UserBll u = new UserBll();
-            SqlConnection conn = new SqlConnection(myconnstrng);
             DataTable dt = new DataTable();
 
             try
             {
+                db.OpenCon();;
                 string sql = "SELECT id FROM tbl_UserD WHERE username='" + username + "'";
 
-                SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
-                conn.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, db.conn);
 
                 adapter.Fill(dt);
                 if (dt.Rows.Count > 0)
@@ -139,7 +135,7 @@ namespace LHMS_Application.Dal
             }
             finally
             {
-                conn.Close();
+                db.CloseCon();
             }
             return u;
         }
@@ -148,12 +144,12 @@ namespace LHMS_Application.Dal
         public bool Update(UserBll u)
         {
             bool isSuccess = false;
-            SqlConnection conn = new SqlConnection(myconnstrng);
 
-            try
+            try 
             {
+                db.OpenCon();
                 string sql = "UPDATE tbl_UserD SET firstname=@firstname, lastname=@lastname, email=@email, username=@username, password=@password, contact=@contact, address=@address, gender=@gender, user_type=@user_type,department=@department, Factory=@Factory, added_Date=@added_Date, added_by=@added_by WHERE id=@id ";
-                SqlCommand cmd = new SqlCommand(sql, conn);
+                SqlCommand cmd = new SqlCommand(sql, db.conn);
 
                 cmd.Parameters.AddWithValue("@firstname", u.firstname);
                 cmd.Parameters.AddWithValue("@lastname", u.lastname);
@@ -170,7 +166,6 @@ namespace LHMS_Application.Dal
                 cmd.Parameters.AddWithValue("@added_by", u.added_by);
                 cmd.Parameters.AddWithValue("@id", u.id);
 
-                conn.Open();
 
                 int rows = cmd.ExecuteNonQuery();
 
@@ -191,7 +186,7 @@ namespace LHMS_Application.Dal
             }
             finally
             {
-                conn.Close();
+                db.CloseCon();
             }
             return isSuccess;
         }
@@ -200,15 +195,15 @@ namespace LHMS_Application.Dal
         public bool Delete(UserBll u)
         {
             bool isSuccess = false;
-            SqlConnection conn = new SqlConnection(myconnstrng);
             try
             {
+                db.OpenCon();;
+                //SQL quray to get the data from the dtabase.
                 string sql = "DELETE FROM tbl_UserD WHERE id=@id";
 
-                SqlCommand cmd = new SqlCommand(sql, conn);
+                SqlCommand cmd = new SqlCommand(sql, db.conn);
                 cmd.Parameters.AddWithValue("@id", u.id);
 
-                conn.Open();
 
                 int rows = cmd.ExecuteNonQuery();
 
@@ -227,7 +222,7 @@ namespace LHMS_Application.Dal
             }
             finally
             {
-                conn.Close();
+                db.CloseCon();
             }
             return isSuccess;
         }
@@ -235,24 +230,20 @@ namespace LHMS_Application.Dal
         #region Search data from using keywords
         public DataTable Search(string keywords)
         {
-            //static method to connect the database.
-            SqlConnection conn = new SqlConnection(myconnstrng);
-
             //to hold the data from the database.
             DataTable dt = new DataTable();
             try
             {
+                //database Connection open.
+                db.OpenCon(); ;
                 //SQL quray to get the data from the dtabase.
                 String sql = "SELECT * FROM tbl_UserD WHERE id LIKE '%" + keywords + "%' OR firstname LIKE '%" + keywords + "%' OR lastname LIKE '%" + keywords + "%' OR username LIKE '%" + keywords + "%' OR department LIKE '%" + keywords + "%' ";
-
                 // for Excute the Command.
-                SqlCommand cmd = new SqlCommand(sql, conn);
+                SqlCommand cmd = new SqlCommand(sql, db.conn);
 
                 //Gatting the data from the data base.
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
 
-                //database Connection open.
-                conn.Open();
 
                 //Fill the data in our database.
                 adapter.Fill(dt);
@@ -265,7 +256,7 @@ namespace LHMS_Application.Dal
             finally
             {
                 //Close the connection for the data base.
-                conn.Close();
+                db.CloseCon();
             }
             //return the vale of the database.
             return dt;

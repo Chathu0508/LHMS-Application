@@ -21,9 +21,9 @@ namespace LHMS_Application.Froms
 
         }
 
-        taskBLL t = new taskBLL();
+        TaskBLL t = new TaskBLL();
         TaskDal dal = new TaskDal();
-        tracklogBll tb = new tracklogBll();
+        TracklogBll tb = new TracklogBll();
         tracklogDal tdal = new tracklogDal();
         userDal udal = new userDal();
 
@@ -53,7 +53,7 @@ namespace LHMS_Application.Froms
             txtTaskid.Text = dgvTasklog.Rows[rowIndex].Cells[01].Value.ToString();
             txtnumberofstages.Text = dgvTasklog.Rows[rowIndex].Cells[02].Value.ToString();
             txtcompletesatges.Text = dgvTasklog.Rows[rowIndex].Cells[03].Value.ToString();
-            txtpendingsatges.Text = dgvTasklog.Rows[rowIndex].Cells[03].Value.ToString();
+            txtpendingsatges.Text = dgvTasklog.Rows[rowIndex].Cells[04].Value.ToString();
         }
 
         private void dgvTasks_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)

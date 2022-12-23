@@ -397,14 +397,9 @@
             this.cmbdepartment.FormattingEnabled = true;
             this.cmbdepartment.Items.AddRange(new object[] {
             "All Departments, Workshop and Units",
-            "Sales & Marketing Department",
-            "Purchasing Department",
             "Finance Department",
-            "IT Department",
             "HR Department",
             "R&D Department",
-            "Engineering Design Department",
-            "Engineering Department",
             "Factory Management Department"});
             this.cmbdepartment.Location = new System.Drawing.Point(241, 678);
             this.cmbdepartment.Name = "cmbdepartment";

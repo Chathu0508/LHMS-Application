@@ -20,7 +20,7 @@ namespace LHMS_Application.Forms
             InitializeComponent();
         }
 
-        categoryBll c = new categoryBll();
+        CategoryBll c = new CategoryBll();
         categoryDal dal = new categoryDal();
         userDal udal = new userDal();
 

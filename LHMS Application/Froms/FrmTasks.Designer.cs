@@ -39,7 +39,6 @@
             this.cmbFactory = new System.Windows.Forms.ComboBox();
             this.cmbDevepartment = new System.Windows.Forms.ComboBox();
             this.btnAddtask = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.dgvtasks = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvtasks)).BeginInit();
             this.SuspendLayout();
@@ -170,21 +169,6 @@
             this.btnAddtask.UseVisualStyleBackColor = false;
             this.btnAddtask.Click += new System.EventHandler(this.btnAddtask_Click);
             // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(44, 438);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(449, 34);
-            this.btnDelete.TabIndex = 31;
-            this.btnDelete.Text = "Deleta Task ";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
             // dgvtasks
             // 
             this.dgvtasks.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -206,7 +190,6 @@
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1238, 790);
             this.Controls.Add(this.dgvtasks);
-            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAddtask);
             this.Controls.Add(this.cmbDevepartment);
             this.Controls.Add(this.cmbFactory);
@@ -241,7 +224,6 @@
         private System.Windows.Forms.ComboBox cmbFactory;
         private System.Windows.Forms.ComboBox cmbDevepartment;
         private System.Windows.Forms.Button btnAddtask;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridView dgvtasks;
     }
 }

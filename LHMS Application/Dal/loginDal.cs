@@ -8,54 +8,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LHMS_Application.Database;
 
 namespace LHMS_Application.Dal
 {
     internal class loginDal
     {
-        //Static connection for the connection database.
-        static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
-
-        public bool loginCheck(loginBll l)
+        DbConnection db= DbConnection.getInstance();
+        public bool loginCheck(LoginBll l)
         {
-            // create boolean varibale and set its values to fales and retuen it
             bool isSuccess = false;
-
-            //connection to database 
-            SqlConnection conn = new SqlConnection(myconnstrng);
-
             try
             {
-                //SQL Query to check login
+                db.OpenCon();
                 string sql = "SELECT * FROM tbl_UserD WHERE username=@username AND password=@password AND user_type=@user_type";
-
-                //Creating SQL Command to pass value
-                SqlCommand cmd = new SqlCommand(sql, conn);
-
+                SqlCommand cmd = new SqlCommand(sql, db.conn);
                 cmd.Parameters.AddWithValue("@username", l.username);
                 cmd.Parameters.AddWithValue("@password", l.password);
                 cmd.Parameters.AddWithValue("@user_type", l.user_type);
-
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-
                 DataTable dt = new DataTable();
-
                 adapter.Fill(dt);
-
-                conn.Open();
-
-                //checking the rows in Datatable
                 if (dt.Rows.Count > 0)
                 {
-                    //login success
                     isSuccess = true;
                 }
                 else
                 {
-                    //login failed
                     isSuccess = false;
                 }
-
             }
             catch (Exception ex)
             {
@@ -64,7 +45,7 @@ namespace LHMS_Application.Dal
             }
             finally
             {
-                conn.Close();
+                db.CloseCon();
             }
             return isSuccess;
         }

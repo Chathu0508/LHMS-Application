@@ -1,4 +1,5 @@
 ﻿using LHMS_Application.BLL;
+using LHMS_Application.Database;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -12,25 +13,16 @@ namespace LHMS_Application.Dal
 {
     internal class transactiondetialDal
     {
-        //connecting with the date base
-        static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
-
-
+        DbConnection db = DbConnection.getInstance();
         #region Insert transaction Method 
-        public bool Inserttransactiondeetails(transactionalDetailsBll td)
+        public bool Inserttransactiondeetails(TransactionalDetailsBll td)
         {
             bool isSuccess = false;
-
-            //create a SQL connection 
-            SqlConnection conn = new SqlConnection(myconnstrng);
-
             try
             {
+                db.OpenCon();
                 string sql = "INSERT INTO tbl_transactionaldetails (product_id, rate, qty, total, dea_cust_id, added_date, added_by) VALUES (@product_id, @rate, @qty, @total, @dea_cust_id, @added_date, @added_by)";
-
-                //sql commom
-                SqlCommand cmd = new SqlCommand(sql, conn);
-
+                SqlCommand cmd = new SqlCommand(sql, db.conn);
                 cmd.Parameters.AddWithValue("@product_id", td.product_id);
                 cmd.Parameters.AddWithValue("@rate", td.rate);
                 cmd.Parameters.AddWithValue("@qty", td.qty);
@@ -38,14 +30,7 @@ namespace LHMS_Application.Dal
                 cmd.Parameters.AddWithValue("@dea_cust_id", td.dea_cust_id);
                 cmd.Parameters.AddWithValue("@added_date", td.added_date);
                 cmd.Parameters.AddWithValue("@added_by", td.added_by);
-
-                //open connection
-                conn.Open();
-
-                //excuyte  curry 
                 int rows = cmd.ExecuteNonQuery();
-
-
                 if (rows>0)
                 {
                     isSuccess = true;
@@ -54,7 +39,6 @@ namespace LHMS_Application.Dal
                 {
                     isSuccess = false;
                 }
-
             }
             catch (Exception ex)
             {
@@ -62,13 +46,10 @@ namespace LHMS_Application.Dal
             }
             finally
             {
-                conn.Close();
+                db.CloseCon();
             }
-
-
             return isSuccess;
         }
-
         #endregion
 
     }

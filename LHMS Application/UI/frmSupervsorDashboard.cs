@@ -116,7 +116,7 @@ namespace LHMS_Application.UI
         }
         private void btnInventory_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Froms.Frminvenroty_tracklog(), sender);
+            //OpenChildForm(new Froms.Frminvenroty_tracklog(), sender);
         }
 
         private void btncloseChildFrom_Click(object sender, EventArgs e)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LHMS_Application.Database;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -11,25 +12,20 @@ namespace LHMS_Application.BLL
 {
     internal class transactionDal
     {
-        static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
+        DbConnection db = DbConnection.getInstance();
+
 
         #region Insert transaction Method 
-        public bool Insert_transaction(transactionsBll ta, out int transactionID)
+        public bool Insert_transaction(TransactionsBll ta, out int transactionID)
         {
             bool isSuccess = false;
-            //set the transaction value into nagative value
             transactionID = -1;
-
-            //create a SQL connection 
-            SqlConnection conn = new SqlConnection(myconnstrng);
-
             try
             {
+                db.OpenCon();
                 string sql = "INSERT INTO tbl_transactions (type, dea_cust_id, grandTotal, transaction_date, tax, discount, added_by) VALUES (@type, @dea_cust_id, @grandTotal, @transaction_date, @tax, @discount, @added_by)";
                 
-                //sql commom
-                SqlCommand cmd= new SqlCommand(sql, conn);
-
+                SqlCommand cmd= new SqlCommand(sql, db.conn);
                 cmd.Parameters.AddWithValue("@type", ta.type);
                 cmd.Parameters.AddWithValue("@dea_cust_id", ta.dea_cust_id);
                 cmd.Parameters.AddWithValue("@grandTotal", ta.grandTotal);
@@ -37,20 +33,12 @@ namespace LHMS_Application.BLL
                 cmd.Parameters.AddWithValue("@tax",ta.tax);
                 cmd.Parameters.AddWithValue("@discount", ta.discount );
                 cmd.Parameters.AddWithValue("@added_by", ta.added_by);
-
-                //open connection
-                conn.Open();
-
-                //excuyte  curry 
                 object o = cmd.ExecuteScalar();
-
                 if (o != null)
                 {
                     transactionID = int.Parse(o.ToString());
                     isSuccess = false;
-
                 }
-
             }
             catch (Exception ex)
             {
@@ -58,7 +46,7 @@ namespace LHMS_Application.BLL
             }
             finally
             {
-                conn.Close();
+                db.CloseCon();
             }
 
 
