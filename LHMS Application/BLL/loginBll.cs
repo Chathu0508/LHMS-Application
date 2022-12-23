@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LHMS_Application.BLL
 {
-    internal class LoginBll
+    public class LoginBll
     {
         public string username { get; set; }
 

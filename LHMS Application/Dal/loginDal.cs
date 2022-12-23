@@ -9,11 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LHMS_Application.Database;
+using LHMS_Application.UI;
 
 namespace LHMS_Application.Dal
 {
-    internal class loginDal
+    public class loginDal
     {
+        //private readonly LogTrackDal logTrackDal;
         DbConnection db= DbConnection.getInstance();
         public bool loginCheck(LoginBll l)
         {
@@ -31,6 +33,20 @@ namespace LHMS_Application.Dal
                 adapter.Fill(dt);
                 if (dt.Rows.Count > 0)
                 {
+                    int UserD_id = 0;
+                    LogTrackBll logTrackBillModel = new LogTrackBll();
+                    foreach (DataRow row in dt.Rows)
+                    {
+                         UserD_id = Convert.ToInt32(row["id"]);
+                    }
+
+                    logTrackBillModel.id = 1;
+                    logTrackBillModel.username = l.username;
+                    logTrackBillModel.UserD_id = UserD_id;
+                    logTrackBillModel.InOut = "LogIn";
+
+                    LogTrackDal dal = new LogTrackDal();
+                    dal.UsrAuthor(logTrackBillModel);
                     isSuccess = true;
                 }
                 else

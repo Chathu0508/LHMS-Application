@@ -12,7 +12,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace LHMS_Application.Dal
 {
-    internal class LogTrackDal
+    public class LogTrackDal
     {        // createing the connection to the datebase.
         DbConnection db = DbConnection.getInstance();
 
@@ -46,10 +46,11 @@ namespace LHMS_Application.Dal
             db.OpenCon();
             try
             {
-                string sql = "INSERT INTO tbl_UserD (username, logtime, InOut,UserD_ID)VALUES (@username, @logtime, I@nOut,@UserD_ID)";
+                string sql = "INSERT INTO tbl_logtrack ( username, logtime, InOut, UserD_id )VALUES (@username, @logtime, @InOut, @UserD_id)";
                 SqlCommand cmd = new SqlCommand(sql, db.conn);
+                //cmd.Parameters.AddWithValue("@id", 0);
                 cmd.Parameters.AddWithValue("@username", lt.username);
-                cmd.Parameters.AddWithValue("@logtime", lt.logtime);
+                cmd.Parameters.AddWithValue("@logtime", DateTime.Now);
                 cmd.Parameters.AddWithValue("@InOut", lt.InOut);
                 cmd.Parameters.AddWithValue("@UserD_id", lt.UserD_id);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);

@@ -1,4 +1,6 @@
-﻿using LHMS_Application.Theme;
+﻿using LHMS_Application.BLL;
+using LHMS_Application.Dal;
+using LHMS_Application.Theme;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,6 +34,8 @@ namespace LHMS_Application.UI
             this.Text = string.Empty;
             this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            Label label= new Label();
+           
 
             //to show he sub buttons
             customizeDesign();
@@ -264,6 +268,21 @@ namespace LHMS_Application.UI
         private void btnlogout_Click(object sender, EventArgs e)
         {
             FrmLogin log = new FrmLogin();
+            LogTrackDal dal = new LogTrackDal();
+
+            int UserD_id = 1;
+            LogTrackBll logTrackBillModel = new LogTrackBll();
+            //foreach (DataRow row in dt.Rows)
+            //{
+            //    UserD_id = Convert.ToInt32(row["id"]);
+            //}
+
+            logTrackBillModel.id = 1;
+            logTrackBillModel.username = "admin";
+            logTrackBillModel.UserD_id = UserD_id;
+            logTrackBillModel.InOut = "LogOut";
+            dal.UsrAuthor(logTrackBillModel);
+
             log.Show();
             this.Hide();
         }
@@ -278,6 +297,11 @@ namespace LHMS_Application.UI
         {
             OpenChildForm(new Froms.FrmLogTrack(), sender);
             hidsubmenu();
+        }
+
+        private void panelDesktopPanal_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace LHMS_Application.BLL
 {
-    internal class LogTrackBll
+    public class LogTrackBll
     {
         public int id { get; set; }
         public string username { get; set; }
