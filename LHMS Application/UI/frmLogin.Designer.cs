@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblusername = new System.Windows.Forms.Label();
             this.txtusername = new System.Windows.Forms.TextBox();
@@ -38,7 +39,11 @@
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.usernameerr = new System.Windows.Forms.ErrorProvider(this.components);
+            this.passworderr = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usernameerr)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.passworderr)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -78,6 +83,7 @@
             this.txtusername.Size = new System.Drawing.Size(448, 25);
             this.txtusername.TabIndex = 2;
             this.txtusername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtusername.Validating += new System.ComponentModel.CancelEventHandler(this.txtusername_Validating);
             // 
             // txtpassword
             // 
@@ -173,10 +179,18 @@
             this.panel1.Controls.Add(this.lblUsertype);
             this.panel1.Controls.Add(this.lblpassword);
             this.panel1.Controls.Add(this.txtpassword);
-            this.panel1.Location = new System.Drawing.Point(740, 48);
+            this.panel1.Location = new System.Drawing.Point(454, 47);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(472, 578);
+            this.panel1.Size = new System.Drawing.Size(568, 578);
             this.panel1.TabIndex = 10;
+            // 
+            // usernameerr
+            // 
+            this.usernameerr.ContainerControl = this;
+            // 
+            // passworderr
+            // 
+            this.passworderr.ContainerControl = this;
             // 
             // FrmLogin
             // 
@@ -193,6 +207,8 @@
             this.Text = "FrmLogin";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usernameerr)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.passworderr)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -209,5 +225,7 @@
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ErrorProvider usernameerr;
+        private System.Windows.Forms.ErrorProvider passworderr;
     }
 }

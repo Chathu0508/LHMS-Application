@@ -41,7 +41,12 @@ namespace LHMS_Application.Database
 
 
         private SqlConnection con;
-        public SqlConnection conn { get { return con; } }
+        public SqlConnection conn 
+        { get 
+            { 
+                return con; 
+            } 
+        }
 
         //private static DbConnection conInstance = new DbConnection();
         private static DbConnection conInstance;

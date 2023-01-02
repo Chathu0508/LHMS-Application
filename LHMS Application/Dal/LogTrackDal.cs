@@ -40,9 +40,9 @@ namespace LHMS_Application.Dal
         }
         #endregion
         #region Get the recoard s for the login and log out 
-        public DataTable UsrAuthor(LogTrackBll lt)
+        public int UsrAuthor(LogTrackBll lt)
         {
-            DataTable dt = new DataTable();
+             
             db.OpenCon();
             try
             {
@@ -53,8 +53,9 @@ namespace LHMS_Application.Dal
                 cmd.Parameters.AddWithValue("@logtime", DateTime.Now);
                 cmd.Parameters.AddWithValue("@InOut", lt.InOut);
                 cmd.Parameters.AddWithValue("@UserD_id", lt.UserD_id);
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                adapter.Fill(dt);
+                
+                return cmd.ExecuteNonQuery();
+
             }
             catch(Exception ex)
             {
@@ -64,7 +65,7 @@ namespace LHMS_Application.Dal
             {
                 db.CloseCon();
             }
-            return dt;
+            return 0;
         }
 
 

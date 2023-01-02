@@ -47,6 +47,12 @@ namespace LHMS_Application.Dal
 
                     LogTrackDal dal = new LogTrackDal();
                     dal.UsrAuthor(logTrackBillModel);
+
+                    //string sql = "select top 1 id from tbl_logtrack where UserD_id = 2 order by logtime desc;";
+                    //int  lastLogId = 13;
+                    //Login.loginId = lastLogId;
+
+
                     isSuccess = true;
                 }
                 else

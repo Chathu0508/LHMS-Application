@@ -49,3 +49,24 @@ D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\L
 D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.Froms.Frmtaskprograss.resources
 D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.Froms.FrmtaskAD.resources
 D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.Froms.FrmLogTrack.resources
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.Froms.FrmInventory.resources
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\bin\Debug\Dapper.Contrib.dll
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\bin\Debug\Dapper.dll
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\bin\Debug\VBSQLHelper.dll
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\bin\Debug\Dapper.xml
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\bin\Debug\Dapper.Contrib.xml
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS Application.csproj.CopyComplete
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS_Application.Froms.FrmproductCode.resources
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\obj\Debug\LHMS Application.csproj.ResolveComReference.cache
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\bin\Debug\ExcelNumberFormat.dll
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\bin\Debug\MoreLinq.dll
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\bin\Debug\System.IO.Packaging.dll
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\bin\Debug\System.Linq.Dynamic.Core.dll
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\bin\Debug\System.ValueTuple.dll
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\bin\Debug\ExcelNumberFormat.xml
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\bin\Debug\MoreLinq.xml
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\bin\Debug\System.Linq.Dynamic.Core.pdb
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\bin\Debug\System.Linq.Dynamic.Core.xml
+D:\Computing Coding PJ\vs\Projects\LHMS-Application\LHMS Application\bin\Debug\System.ValueTuple.xml

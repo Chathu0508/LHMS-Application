@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.pnlmenu = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnlogout = new System.Windows.Forms.Button();
+            this.btntacktrack = new System.Windows.Forms.Button();
+            this.btnlogtrack = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
             this.pnllogo = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlTitleBar = new System.Windows.Forms.Panel();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@
             this.btncloseChildFrom = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.panelDesktopPanal = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnlmenu.SuspendLayout();
             this.pnllogo.SuspendLayout();
             this.pnlTitleBar.SuspendLayout();
@@ -50,9 +50,9 @@
             // pnlmenu
             // 
             this.pnlmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.pnlmenu.Controls.Add(this.button3);
-            this.pnlmenu.Controls.Add(this.button2);
-            this.pnlmenu.Controls.Add(this.button1);
+            this.pnlmenu.Controls.Add(this.btnlogout);
+            this.pnlmenu.Controls.Add(this.btntacktrack);
+            this.pnlmenu.Controls.Add(this.btnlogtrack);
             this.pnlmenu.Controls.Add(this.btnUser);
             this.pnlmenu.Controls.Add(this.pnllogo);
             this.pnlmenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -61,56 +61,59 @@
             this.pnlmenu.Size = new System.Drawing.Size(220, 573);
             this.pnlmenu.TabIndex = 0;
             // 
-            // button3
+            // btnlogout
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::LHMS_Application.Properties.Resources.people;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 260);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(220, 60);
-            this.button3.TabIndex = 4;
-            this.button3.Text = " - User Create";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnlogout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnlogout.FlatAppearance.BorderSize = 0;
+            this.btnlogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlogout.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlogout.ForeColor = System.Drawing.Color.White;
+            this.btnlogout.Image = global::LHMS_Application.Properties.Resources.people;
+            this.btnlogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnlogout.Location = new System.Drawing.Point(0, 513);
+            this.btnlogout.Name = "btnlogout";
+            this.btnlogout.Size = new System.Drawing.Size(220, 60);
+            this.btnlogout.TabIndex = 4;
+            this.btnlogout.Text = " - Logout";
+            this.btnlogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnlogout.UseVisualStyleBackColor = true;
+            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
             // 
-            // button2
+            // btntacktrack
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::LHMS_Application.Properties.Resources.people;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 200);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(220, 60);
-            this.button2.TabIndex = 3;
-            this.button2.Text = " - User Create";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btntacktrack.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btntacktrack.FlatAppearance.BorderSize = 0;
+            this.btntacktrack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btntacktrack.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntacktrack.ForeColor = System.Drawing.Color.White;
+            this.btntacktrack.Image = global::LHMS_Application.Properties.Resources.people;
+            this.btntacktrack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btntacktrack.Location = new System.Drawing.Point(0, 200);
+            this.btntacktrack.Name = "btntacktrack";
+            this.btntacktrack.Size = new System.Drawing.Size(220, 60);
+            this.btntacktrack.TabIndex = 3;
+            this.btntacktrack.Text = " - Task Update check";
+            this.btntacktrack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btntacktrack.UseVisualStyleBackColor = true;
+            this.btntacktrack.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnlogtrack
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::LHMS_Application.Properties.Resources.task;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 140);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(220, 60);
-            this.button1.TabIndex = 2;
-            this.button1.Text = " - Tasks";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnlogtrack.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnlogtrack.FlatAppearance.BorderSize = 0;
+            this.btnlogtrack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlogtrack.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlogtrack.ForeColor = System.Drawing.Color.White;
+            this.btnlogtrack.Image = global::LHMS_Application.Properties.Resources.task;
+            this.btnlogtrack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnlogtrack.Location = new System.Drawing.Point(0, 140);
+            this.btnlogtrack.Name = "btnlogtrack";
+            this.btnlogtrack.Size = new System.Drawing.Size(220, 60);
+            this.btnlogtrack.TabIndex = 2;
+            this.btnlogtrack.Text = " - log track";
+            this.btnlogtrack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnlogtrack.UseVisualStyleBackColor = true;
+            this.btnlogtrack.Click += new System.EventHandler(this.btnlogtrack_Click);
             // 
             // btnUser
             // 
@@ -139,6 +142,17 @@
             this.pnllogo.Name = "pnllogo";
             this.pnllogo.Size = new System.Drawing.Size(220, 80);
             this.pnllogo.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(43, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(134, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "LockHood (Pvt) Ltd.";
             // 
             // pnlTitleBar
             // 
@@ -232,17 +246,6 @@
             this.panelDesktopPanal.Size = new System.Drawing.Size(862, 493);
             this.panelDesktopPanal.TabIndex = 2;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(43, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "LockHood (Pvt) Ltd.";
-            // 
             // frmFactoryHDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -269,9 +272,9 @@
         private System.Windows.Forms.Button btnUser;
         private System.Windows.Forms.Panel pnlTitleBar;
         private System.Windows.Forms.Button btncloseChildFrom;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnlogout;
+        private System.Windows.Forms.Button btntacktrack;
+        private System.Windows.Forms.Button btnlogtrack;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panelDesktopPanal;
         private System.Windows.Forms.Button btnMinimize;

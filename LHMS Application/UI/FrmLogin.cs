@@ -34,6 +34,29 @@ namespace LHMS_Application.UI
 
             // checking the login credentials
             bool sucess = dal.loginCheck(l);
+
+            
+            //Error Provider for the Username and Error Provider for the password
+
+            if (string.IsNullOrEmpty(txtusername.Text.Trim()))
+            {
+                usernameerr.SetError(txtusername, "Username is Required");
+            }
+            else
+            {
+                usernameerr.SetError(txtusername, string.Empty);
+
+            }
+            if (string.IsNullOrEmpty(txtpassword.Text.Trim()))
+            {
+                passworderr.SetError(txtpassword, "Password is Required");
+            }
+            else
+            {
+                passworderr.SetError(txtpassword, string.Empty);
+            }
+
+            //if the both textboxs were fill the following code will run
             if (sucess == true)
             {
                 //login successful
@@ -92,6 +115,7 @@ namespace LHMS_Application.UI
                 //login failed
                 MessageBox.Show("Fail to login");
             }
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -117,6 +141,10 @@ namespace LHMS_Application.UI
         {
             this.WindowState = FormWindowState.Minimized;
 
+        }
+
+        private void txtusername_Validating(object sender, CancelEventArgs e)
+        {
         }
     }
 }

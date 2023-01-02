@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using VBSQLHelper;
 
 namespace LHMS_Application.Forms
 {
@@ -31,7 +32,7 @@ namespace LHMS_Application.Forms
             p.category = cmbCategory.Text;
             p.description = txtDescription.Text;
             p.rate = decimal.Parse(txtRate.Text);
-            p.qty = 0;
+            p.qty = int.Parse(txtqty.Text);
             p.added_date = DateTime.Now;
 
             //Getting the user name 
@@ -95,6 +96,7 @@ namespace LHMS_Application.Forms
             p.category = cmbCategory.Text;
             p.description = txtDescription.Text;
             p.rate = decimal.Parse(txtRate.Text);
+            p.qty = int.Parse(txtqty.Text);
             p.added_date = DateTime.Now;
 
             //Getting Username of logged in user for addedby
@@ -135,6 +137,7 @@ namespace LHMS_Application.Forms
             cmbCategory.Text = dgvProduct.Rows[rowIndex].Cells[2].Value.ToString();
             txtDescription.Text = dgvProduct.Rows[rowIndex].Cells[3].Value.ToString();
             txtRate.Text = dgvProduct.Rows[rowIndex].Cells[4].Value.ToString();
+            txtqty.Text = dgvProduct.Rows[rowIndex].Cells[5].Value.ToString();
 
         }
 
@@ -181,8 +184,8 @@ namespace LHMS_Application.Forms
                 DataTable dt = pdal.Select();
                 dgvProduct.DataSource = dt;
             }
+        
         }
-
     }
 }
 

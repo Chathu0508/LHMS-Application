@@ -65,7 +65,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -78,9 +78,9 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(553, 717);
+            this.btnAdd.Location = new System.Drawing.Point(527, 655);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(561, 44);
+            this.btnAdd.Size = new System.Drawing.Size(587, 44);
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Add Users";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -93,9 +93,9 @@
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(919, 655);
+            this.btnUpdate.Location = new System.Drawing.Point(527, 704);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(202, 44);
+            this.btnUpdate.Size = new System.Drawing.Size(587, 44);
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Update the Users";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -108,9 +108,9 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(774, 655);
+            this.btnDelete.Location = new System.Drawing.Point(527, 754);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(139, 44);
+            this.btnDelete.Size = new System.Drawing.Size(587, 44);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete Users";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -122,11 +122,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUsers.BackgroundColor = System.Drawing.Color.White;
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsers.Location = new System.Drawing.Point(553, 76);
+            this.dgvUsers.Location = new System.Drawing.Point(527, 76);
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.RowHeadersWidth = 51;
             this.dgvUsers.RowTemplate.Height = 24;
-            this.dgvUsers.Size = new System.Drawing.Size(561, 473);
+            this.dgvUsers.Size = new System.Drawing.Size(587, 541);
             this.dgvUsers.TabIndex = 23;
             this.dgvUsers.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvUsers_RowHeaderMouseClick);
             // 
@@ -456,9 +456,9 @@
             // 
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(554, 603);
+            this.txtSearch.Location = new System.Drawing.Point(24, 835);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(561, 28);
+            this.txtSearch.Size = new System.Drawing.Size(465, 28);
             this.txtSearch.TabIndex = 60;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged_1);
             // 
@@ -466,37 +466,27 @@
             // 
             this.lblSearch.AutoSize = true;
             this.lblSearch.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(550, 569);
+            this.lblSearch.Location = new System.Drawing.Point(20, 801);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(114, 21);
             this.lblSearch.TabIndex = 59;
             this.lblSearch.Text = "Search Users";
             // 
-            // btnSearch
+            // panel6
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Image = global::LHMS_Application.Properties.Resources.search;
-            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(554, 655);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(214, 44);
-            this.btnSearch.TabIndex = 61;
-            this.btnSearch.Text = " - - Search Users";
-            this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.panel6.Location = new System.Drawing.Point(18, 783);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(482, 4);
+            this.panel6.TabIndex = 52;
             // 
             // FrmUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1139, 827);
-            this.Controls.Add(this.btnSearch);
+            this.ClientSize = new System.Drawing.Size(1139, 881);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.panel5);
@@ -584,6 +574,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label lblSearch;
-        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Panel panel6;
     }
 }

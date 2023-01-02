@@ -9,11 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LHMS_Application.Database;
+using VBSQLHelper;
 
 namespace LHMS_Application.Dal
 {
     internal class productDal
     {
+
 
         DbConnection db = DbConnection.getInstance();
 
@@ -42,19 +44,22 @@ namespace LHMS_Application.Dal
 
         #endregion
         #region Method to insert the data to Data Table
+
         public bool Insert(ProductBll p)
         {
             bool isSuccess = false;
             try
             {
                 db.OpenCon();
-                String sql = "INSERT INTO  tbl_Product (name, category, description, rate, qty, added_date, added_by) VALUES (@name, @category, @description, @rate, @qty, @added_date, @added_by)";
+                String sql = "INSERT INTO  tbl_Product (name, ProductCode, category, description, rate, qty, Type, added_date, added_by) VALUES (@name, @ProductCode, @category, @description, @rate, @qty, @Type, @added_date, @added_by)";
                 SqlCommand cmd = new SqlCommand(sql, db.conn);
                 cmd.Parameters.AddWithValue("@name", p.name);
+                cmd.Parameters.AddWithValue("@ProductCode", p.ProductCode);
                 cmd.Parameters.AddWithValue("@category", p.category);
                 cmd.Parameters.AddWithValue("@description", p.description);
                 cmd.Parameters.AddWithValue("@rate", p.rate);
                 cmd.Parameters.AddWithValue("@qty", p.qty);
+                cmd.Parameters.AddWithValue("@Type", p.Type);
                 cmd.Parameters.AddWithValue("@added_date", p.added_date);
                 cmd.Parameters.AddWithValue("@added_by", p.added_by);
                 int rows = cmd.ExecuteNonQuery();

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VBSQLHelper;
 
 namespace LHMS_Application
 {
@@ -19,14 +20,15 @@ namespace LHMS_Application
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FrmOpening());
+
+            SQLHelper.DATABASE = "LookHoodDB";
+            SQLHelper.USERNAME_DB = "DESKTOP-RPB2NDQ\\MSSQL2019";
+
+            //Frm ACCess -----------------------------------------------------
+            //Application.Run(new FrmLogTrack());
             Application.Run(new FrmLogin());
-            //Application.Run(new frmDashboardAD());
-            //Application.Run(new frmFactoryHDashboard());
-            //Application.Run(new frmDepartmentHDashboard());
-            //Application.Run(new frmSupervsorDashboard());`
-            //Application.Run(new FrmTaskTrack());
-            //Application.Run(new FrmUsers());
+            //Application.Run(new SampleTestUI());
+
         }
     }
 }

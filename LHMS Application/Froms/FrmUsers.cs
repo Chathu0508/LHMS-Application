@@ -20,7 +20,7 @@ namespace LHMS_Application.Forms
         public FrmUsers()
         {
             InitializeComponent();
-            LoadTheme();
+            //LoadTheme();
         }
         UserBll u = new UserBll();
         userDal dal = new userDal();
@@ -47,50 +47,11 @@ namespace LHMS_Application.Forms
         private bool Validation()
         {
             bool isEmpty = false;
-            if (String.IsNullOrWhiteSpace(txtFirstName.Text))
+            if (!String.IsNullOrWhiteSpace(txtFirstName.Text) && !String.IsNullOrWhiteSpace(txtLastName.Text) && !String.IsNullOrWhiteSpace(txtEmail.Text) && !String.IsNullOrWhiteSpace(txtUsername.Text) && !String.IsNullOrWhiteSpace(txtPassword.Text) && !String.IsNullOrWhiteSpace(txtContact.Text) && !String.IsNullOrWhiteSpace(txtAddress.Text) && !String.IsNullOrWhiteSpace(cmbGender.Text) && !String.IsNullOrWhiteSpace(cmbUserType.Text) && !String.IsNullOrWhiteSpace(cmbdepartment.Text) && !String.IsNullOrWhiteSpace(cmbFactory.Text))
             {
                 isEmpty = true;
             }
-            if (String.IsNullOrWhiteSpace(txtLastName.Text))
-            {
-                isEmpty = true;
-            }
-            if (String.IsNullOrWhiteSpace(txtEmail.Text))
-            {
-                isEmpty = true;
-            }
-            if (String.IsNullOrWhiteSpace(txtUsername.Text))
-            {
-                isEmpty = true;
-            }
-            if (String.IsNullOrWhiteSpace(txtPassword.Text))
-            {
-                isEmpty = true;
-            }
-            if (String.IsNullOrWhiteSpace(txtContact.Text))
-            {
-                isEmpty = true;
-            }
-            if (String.IsNullOrWhiteSpace(txtAddress.Text))
-            {
-                isEmpty = true;
-            }
-            if (String.IsNullOrWhiteSpace(cmbGender.Text))
-            {
-                isEmpty = true;
-            }
-            if (String.IsNullOrWhiteSpace(cmbUserType.Text))
-            {
-                isEmpty = true;
-            }
-            if (String.IsNullOrWhiteSpace(cmbdepartment.Text))
-            {
-                isEmpty = true;
-            }
-            if (String.IsNullOrWhiteSpace(cmbFactory.Text))
-            {
-                isEmpty = true;
-            }
+
             return isEmpty;
         }
 
@@ -99,7 +60,7 @@ namespace LHMS_Application.Forms
 
             bool isEmpty = Validation();
 
-            if (!isEmpty)
+            if (isEmpty)
             {
                 //getting Username of the logged in User
                 string loggedUser = FrmLogin.LoggedIn;
@@ -146,10 +107,10 @@ namespace LHMS_Application.Forms
 
             else
             {
-                MessageBox.Show("Please Insert");
+                MessageBox.Show("Please Insert all the deatils");
             }
         }
-    
+
 
         public void clear()
         {
@@ -174,7 +135,7 @@ namespace LHMS_Application.Forms
             dgvUsers.DataSource = dt;
 
         }
-        
+
         // to load the users in the data grid and select from it.
         private void dgvUsers_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -210,7 +171,11 @@ namespace LHMS_Application.Forms
             u.department = cmbdepartment.Text;
             u.Factory = cmbFactory.Text;
             u.added_Date = DateTime.Now;
-            u.added_by = 1;
+
+            string loggeduser = FrmLogin.LoggedIn;
+            UserBll usr = dal.GetIDFromUsername(loggeduser);
+
+            u.added_by = usr.id;
 
             //updat database
             bool success = dal.Update(u);

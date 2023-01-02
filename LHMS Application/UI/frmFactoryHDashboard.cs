@@ -75,8 +75,6 @@ namespace LHMS_Application.UI
                     previousBtn.BackColor = Color.FromArgb(51, 51, 76);
                     previousBtn.ForeColor = Color.Gainsboro;
                     previousBtn.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
-
                 }
             }
         }
@@ -150,6 +148,23 @@ namespace LHMS_Application.UI
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Froms.Frmtaskprograss(), sender);
+        }
+
+        private void btnlogtrack_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Froms.FrmLogTrack(), sender);
+        }
+
+        private void btnlogout_Click(object sender, EventArgs e)
+        {
+            FrmLogin log = new FrmLogin();
+            log.Show();
+            this .Close();
         }
     }
 }

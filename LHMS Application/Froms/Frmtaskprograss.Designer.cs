@@ -31,11 +31,13 @@
             this.Dgvtaskprogress = new System.Windows.Forms.DataGridView();
             this.lblSerach = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnexport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgvtaskprogress)).BeginInit();
             this.SuspendLayout();
             // 
             // Dgvtaskprogress
             // 
+            this.Dgvtaskprogress.BackgroundColor = System.Drawing.Color.White;
             this.Dgvtaskprogress.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgvtaskprogress.Location = new System.Drawing.Point(23, 29);
             this.Dgvtaskprogress.Name = "Dgvtaskprogress";
@@ -63,11 +65,26 @@
             this.txtSearch.TabIndex = 2;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
+            // btnexport
+            // 
+            this.btnexport.FlatAppearance.BorderSize = 0;
+            this.btnexport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnexport.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnexport.Location = new System.Drawing.Point(904, 627);
+            this.btnexport.Name = "btnexport";
+            this.btnexport.Size = new System.Drawing.Size(215, 51);
+            this.btnexport.TabIndex = 3;
+            this.btnexport.Text = "Export";
+            this.btnexport.UseVisualStyleBackColor = true;
+            this.btnexport.Click += new System.EventHandler(this.btnexport_Click);
+            // 
             // Frmtaskprograss
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1147, 674);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1147, 701);
+            this.Controls.Add(this.btnexport);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblSerach);
             this.Controls.Add(this.Dgvtaskprogress);
@@ -85,5 +102,6 @@
         private System.Windows.Forms.DataGridView Dgvtaskprogress;
         private System.Windows.Forms.Label lblSerach;
         private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnexport;
     }
 }

@@ -100,8 +100,6 @@ namespace LHMS_Application.UI
                     previousBtn.BackColor = Color.FromArgb(51, 51, 76);
                     previousBtn.ForeColor = Color.Gainsboro;
                     previousBtn.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
-
                 }
             }
         }
@@ -226,6 +224,11 @@ namespace LHMS_Application.UI
             //OpenChildForm(new Froms.FrmInventoryTrackAD(), sender);
             hidsubmenu();
         }
+        private void btnproc_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Froms.FrmproductCode(), sender);
+        }
+
 
         //task Deatils button and sub button
         private void button1_Click(object sender, EventArgs e)
@@ -270,14 +273,14 @@ namespace LHMS_Application.UI
             FrmLogin log = new FrmLogin();
             LogTrackDal dal = new LogTrackDal();
 
-            int UserD_id = 1;
+            int UserD_id = 0;
             LogTrackBll logTrackBillModel = new LogTrackBll();
             //foreach (DataRow row in dt.Rows)
             //{
             //    UserD_id = Convert.ToInt32(row["id"]);
             //}
 
-            logTrackBillModel.id = 1;
+            logTrackBillModel.id = UserD_id;
             logTrackBillModel.username = "admin";
             logTrackBillModel.UserD_id = UserD_id;
             logTrackBillModel.InOut = "LogOut";
@@ -299,9 +302,26 @@ namespace LHMS_Application.UI
             hidsubmenu();
         }
 
+        private void btntask_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Froms.Frmtaskprograss(), sender);
+        }
+
+
         private void panelDesktopPanal_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
+        private void panelTitleBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void frmDashboardAD_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
